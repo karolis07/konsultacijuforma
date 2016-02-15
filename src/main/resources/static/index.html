@@ -1,11 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="demoApp">
 <head>
     <meta charset="UTF-8">
-    <title>Peanuts</title>
 </head>
 <body>
-<h1>Hello world!</h1>
-<p><a href="newRegistration.html">NEW REGISTRATION</a></p>
+<div>
+    <div ng-view></div>
+</div>
+
+<!--<script src="angular.min.js"></script>-->
+<script src="angular.js"></script>
+<script src="angular-route.js"></script>
+
+<script>
+    var demoApp = angular.module('demoApp',['ngRoute]);
+
+    demoApp.config(['$routeProvider', function ($routeProvider){
+        $routeProvider
+            .when('/',
+            {
+                controller: 'SimpleController',
+                templateUrl: 'View1.html'
+            })
+            .when('/newReg',
+            {
+                controller: 'SimpleController',
+                templateUrl: 'newRegistration.html'
+            })
+            .otherwise({ redirectTo: '/'});
+        }]);
+
+    demoApp.controller('SimpleController', function($scope) {
+        $scope.customers = [
+            { name: 'John Smith' , city: 'Phoenix'},
+            { name: 'John Doe' , city: 'New York'},
+            { name: 'John Smith' , city: 'San Francisco'}
+        ];
+
+        $scope.addCustomer = function()
+        {
+            $scope.customers.push(
+            { name: $scope.newCustomer.name, city: $scope.newCustomer.name}
+            );
+        }
+    });
+</script>
+
 </body>
 </html>

@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>New Registration window</title>
-</head>
-<body>
-<p>Link works ! yay ;)</p>
-</body>
-</html>
+<div class="container">
+    <h2>newReg</h2>
+    City:
+    <br/>
+    <input type="text" ng-model="filter.city"/>
+    <br/>
+    <ul>
+        <li ng-repeat="customer in customers | filter:filter.city">{{customer.name}} - {{customer.city}}</li>
+    </ul>
+</div>
