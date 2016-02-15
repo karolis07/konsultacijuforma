@@ -3,49 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="angular.js"></script>
+    <script src="angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="index.js"></script>
 </head>
-<body>
-<h1>Susisiekite su mumis</h1>
-<div class="list-group">
-    <a href="#/newReg" class="list-group-item">newReg</a>
-    <a href="#/contact" class="list-group-item">contact</a>
-    <a href="#/history" class="list-group-item">history</a>
+<body class="container">
+
+
+
+<div>
+<div ng-view></div>
 </div>
-<!--<div>-->
-    <!--<div ng-view></div>-->
-<!--</div>-->
 
 <!--<script src="angular.min.js"></script>-->
-<script src="angular.js"></script>
-<script src="angular-route.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
-
-<script>
-    var demoApp = angular.module('demoApp',['ngRoute']);
-
-    demoApp.config(['$routeProvider', function ($routeProvider){
-        $routeProvider
-            .when('/',
-            {
-                controller: 'SimpleController',
-                templateUrl: 'index.html'
-            })
-            .when('/newReg',
-            {
-                controller: 'SimpleController',
-                templateUrl: 'newRegistration.html'
-            })
-            .when('/contact',
-            {
-                controller: 'SimpleController',
-                templateUrl: 'contact.html'
-            })
-            .otherwise({ redirectTo: '/'});
-        }]);
-
-
-</script>
-
 </body>
 </html>
