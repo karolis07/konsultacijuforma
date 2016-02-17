@@ -29,8 +29,7 @@ public class StoryResource {
     public ResponseEntity<Void> submitStory(@RequestBody Story story) {
         Story storyWithExtractedInformation = decorateWithInformation(story);
         storyRepository.save(storyWithExtractedInformation);
-        ResponseEntity<Void> responseEntity = new ResponseEntity<Void>(HttpStatus.CREATED);
-        return responseEntity;
+        return new ResponseEntity<Void>(HttpStatus.CREATED);
     }
 
     @RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)

@@ -23,8 +23,7 @@ public class ApplicationConfig {
         UserCredentials userCredentials = new UserCredentials(username, password);
         String databaseName = System.getenv("OPENSHIFT_APP_NAME");
         MongoDbFactory mongoDbFactory = new SimpleMongoDbFactory(mongo, databaseName, userCredentials);
-        MongoTemplate mongoTemplate = new MongoTemplate(mongoDbFactory);
-        return mongoTemplate;
+        return new MongoTemplate(mongoDbFactory);
     }
 
 }
