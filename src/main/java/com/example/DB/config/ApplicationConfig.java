@@ -1,4 +1,4 @@
-package com.example.DB;
+package com.example.DB.config;
 
 import com.mongodb.Mongo;
 import org.springframework.context.annotation.Bean;
@@ -10,7 +10,7 @@ import org.springframework.data.mongodb.core.SimpleMongoDbFactory;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @Configuration
-@EnableMongoRepositories(basePackageClasses = StoryRepository.class)
+@EnableMongoRepositories(basePackageClasses = com.example.DB.repository.StoryRepository.class)
 public class ApplicationConfig {
 
     @Bean
@@ -23,7 +23,8 @@ public class ApplicationConfig {
         UserCredentials userCredentials = new UserCredentials(username, password);
         String databaseName = System.getenv("OPENSHIFT_APP_NAME");
         MongoDbFactory mongoDbFactory = new SimpleMongoDbFactory(mongo, databaseName, userCredentials);
-        return new MongoTemplate(mongoDbFactory);
+        MongoTemplate mongoTemplate = new MongoTemplate(mongoDbFactory);
+        return mongoTemplate;
     }
 
 }

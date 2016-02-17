@@ -1,4 +1,4 @@
-package com.example.DB;
+package com.example.DB.rest;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

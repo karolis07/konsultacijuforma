@@ -1,5 +1,7 @@
-package com.example.DB;
+package com.example.DB.rest;
 
+import com.example.DB.domain.Story;
+import com.example.DB.repository.StoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -29,7 +31,8 @@ public class StoryResource {
     public ResponseEntity<Void> submitStory(@RequestBody Story story) {
         Story storyWithExtractedInformation = decorateWithInformation(story);
         storyRepository.save(storyWithExtractedInformation);
-        return new ResponseEntity<Void>(HttpStatus.CREATED);
+        ResponseEntity<Void> responseEntity = new ResponseEntity<Void>(HttpStatus.CREATED);
+        return responseEntity;
     }
 
     @RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)

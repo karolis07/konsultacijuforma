@@ -1,4 +1,4 @@
-package com.example.DB;
+package com.example.DB.rest;
 
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
