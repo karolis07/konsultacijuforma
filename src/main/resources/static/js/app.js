@@ -10,9 +10,9 @@ angular.module("getbookmarks.services", ["ngResource"]).
 angular.module("getbookmarks", ["getbookmarks.services"]).
     config(function ($routeProvider) {
         $routeProvider
-            .when('/', {templateUrl: 'views/stories/list.html', controller: StoryListController})
-            .when('/stories/new', {templateUrl: 'views/stories/create.html', controller: StoryCreateController})
-            .when('/stories/:storyId', {templateUrl: 'views/stories/detail.html', controller: StoryDetailController});
+            .when('/', {templateUrl: 'views.stories/list.html', controller: StoryListController})
+            .when('/stories/new', {templateUrl: 'views.stories/create.html', controller: StoryCreateController})
+            .when('/stories/:storyId', {templateUrl: 'views.stories/detail.html', controller: StoryDetailController});
     });
 
 function StoryListController($scope, Story) {
