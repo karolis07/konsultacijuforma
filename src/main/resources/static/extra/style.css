@@ -1,5 +1,37 @@
-.header {
+.main {
+    background-image: url("main.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     width: 100%;
-    padding: 0px;
-    margin: 0px;
+    float: left;
+}
+.column1 {
+    margin-left: 15.5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 18%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    align-items: center;
+}
+.column2 {
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 18%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    align-items: center;
+}
+.column3 {
+    margin-left: 3%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 18%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    align-items: center;
 }
