@@ -4,7 +4,7 @@ import com.example.DB.Employee;
 import com.example.DB.EmployeeRepository;
 import com.example.beans.Peanut;
 import com.example.beans.PeanutList;
-import com.example.config.MongoDBConfigRedHat;
+import com.example.config.MongoDBConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,7 +27,7 @@ class newService {
 //        peanutList.addPeanut(new Peanut("Karolis"));
 //        peanutList.addPeanut(new Peanut("Antanas"));
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
-        ctx.register(MongoDBConfigRedHat.class);
+        ctx.register(MongoDBConfig.class);
         ctx.refresh();
         employeeRepository = ctx.getBean(EmployeeRepository.class);
     }
