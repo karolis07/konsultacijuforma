@@ -3,27 +3,43 @@
  */
 var demoApp = angular.module('demoApp',['ngRoute']);
 
-    demoApp.config(['$routeProvider', function ($routeProvider){
+    demoApp.config(function($routeProvider){
         $routeProvider
             .when('/',
             {
-                controller: 'SimpleController',
-                templateUrl: 'home.html'
+                controller: 'homeController',
+                templateUrl: 'pages/home.html'
             })
-            .when('/newReg',
+            .when('/register',
             {
-                controller: 'SimpleController',
-                templateUrl: 'newRegistration.html'
+                controller: 'registerController',
+                templateUrl: 'pages/registration.html'
             })
             .when('/contact',
             {
-                controller: 'SimpleController',
-                templateUrl: 'contact.html'
+                controller: 'contactController',
+                templateUrl: 'pages/contact.html'
             })
             .when('/history',
                         {
-                            controller: 'SimpleController',
-                            templateUrl: 'history.html'
+                            controller: 'historyController',
+                            templateUrl: 'pages/history.html'
                         })
             .otherwise({ redirectTo: '/'});
-        }]);
+        });
+
+        demoApp.controller('registerController', [function() {
+                   angular.element(document).ready(function () {
+                        var date_input=$('input[name="date"]'); //our date input has the name "date"
+                        var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+                        date_input.datepicker({
+                            format: 'dd/mm/yyyy',
+                            container: container,
+                            todayHighlight: true,
+                            autoclose: true,
+                        })
+                        });
+                     }]);
+
+
+
