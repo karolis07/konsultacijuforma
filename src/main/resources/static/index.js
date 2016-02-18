@@ -33,6 +33,11 @@ var demoApp = angular.module('demoApp',['ngRoute']);
             .otherwise({ redirectTo: '/'});
         });
 
+        demoApp.controller('cookieController', ['$scope', function($scope) {
+            document.cookie = "someCookieName=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+            $scope.cookies = document.cookie;
+        }]);
+
         demoApp.controller('loginController', ['$scope', '$http', '$templateCache',
             function($scope, $http, $templateCache){
                 $scope.method = 'GET';

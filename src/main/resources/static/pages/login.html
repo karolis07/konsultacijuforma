@@ -53,16 +53,14 @@
 </div>
 
 <div ng-controller="loginController">
-    <select ng-model="method" aria-label="Request method">
-        <option>GET</option>
-        <option>JSON</option>
-    </select>
-    <input type="text" ng-model="url" size="80" aria-label="URL" />
-    <button id="fetchbtn" ng-click="fetch()">fetch</button>
     <pre>{{status}}</pre>
     <pre>{{data}}</pre>
     <pre>{{data[2].id}}</pre>
     <pre>{{data[2].name}}</pre>
+</div>
+
+<div ng-controller="cookieController">
+    <pre>{{cookies}}</pre>
 </div>
 
 </body>
