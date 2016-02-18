@@ -25,8 +25,35 @@ var demoApp = angular.module('demoApp',['ngRoute']);
                             controller: 'historyController',
                             templateUrl: 'pages/history.html'
                         })
+            .when('/login',
+                {
+                    controller: 'loginController',
+                    templateUrl: 'pages/login.html'
+                })
             .otherwise({ redirectTo: '/'});
         });
+
+        demoApp.controller('loginController', ['$scope', '$http', '$templateCache',
+            function($scope, $http, $templateCache){
+                $scope.method = 'GET';
+                $scope.url = '/peanuts';
+                $scope.code = null;
+                $scope.response = null;
+
+                $http({method: $scope.method, url: $scope.url, cache: $templateCache}).
+                then(function(response){
+                    $scope.status = response.status;
+                    $scope.data = response.data;
+                }, function(response){
+                    $scope.data = response.data || "Request failed";
+                    $scope.status = response.status;
+                });
+
+                $scope.updateModel = function(method, url) {
+                    $scope.method = method;
+                    $scope.url = url;
+                };
+            }]);
 
         demoApp.controller('registerController', [function() {
                    angular.element(document).ready(function () {

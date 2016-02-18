@@ -5,10 +5,22 @@
     width: 100%;
     float: left;
 }
-.column1 {
-    margin-left: 15.5%;
+.login {
+    background-color: limegreen;
+    margin-left: 36%;
     margin-top: 1%;
     margin-bottom: 1%;
+    padding: 2%;
+    width: 18%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    align-items: center;
+}
+.column1 {
+    margin-left: 15.5%;
+    margin-top: 3%;
+    margin-bottom: 3%;
     width: 18%;
     height: 100%;
     float: left;
@@ -17,8 +29,8 @@
 }
 .column2 {
     margin-left: 2%;
-    margin-top: 1%;
-    margin-bottom: 1%;
+    margin-top: 3%;
+    margin-bottom: 3%;
     width: 18%;
     height: 100%;
     float: left;
@@ -27,11 +39,32 @@
 }
 .column3 {
     margin-left: 3%;
-    margin-top: 1%;
-    margin-bottom: 1%;
+    margin-top: 3%;
+    margin-bottom: 3%;
     width: 18%;
     height: 100%;
     float: left;
     overflow: hidden;
     align-items: center;
+}
+.buttonWriteUs {
+    background-image: url("write_us.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 65%;
+    height: 50px;
+}
+.buttonRegister {
+    background-image: url("register.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 65%;
+    height: 50px;
+}
+.buttonMyReg {
+    background-image: url("myRegistrations.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 65%;
+    height: 50px;
 }
