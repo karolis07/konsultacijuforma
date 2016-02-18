@@ -21,7 +21,7 @@ public class MongoDBConfigRedHat {
     EmployeeRepository employeeRepository;
     @Bean
     public MongoDbFactory mongoDbFactory() throws Exception {
-        MongoClient mongoClient = new MongoClient(127.9.90.2,27017);
+        MongoClient mongoClient = new MongoClient("localhost",27017);
         UserCredentials userCredentials = new UserCredentials("admin","QapjnAGeiw1E");
         return new SimpleMongoDbFactory(mongoClient, "concretepage",userCredentials);
     }
