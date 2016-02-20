@@ -57,8 +57,8 @@
       <file leaf-file-name="registration.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/pages/registration.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4002242">
-              <caret line="135" column="62" selection-start-line="135" selection-start-column="62" selection-end-line="135" selection-end-column="62" />
+            <state vertical-scroll-proportion="2.3632288">
+              <caret line="124" column="24" selection-start-line="124" selection-start-column="24" selection-end-line="124" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -1468,7 +1468,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456011286161</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="try register">
+      <created>1456011535757</created>
+      <option name="number" value="00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1456011535757</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1931,8 +1937,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/pages/registration.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4002242">
-          <caret line="135" column="62" selection-start-line="135" selection-start-column="62" selection-end-line="135" selection-end-column="62" />
+        <state vertical-scroll-proportion="2.3632288">
+          <caret line="124" column="24" selection-start-line="124" selection-start-column="24" selection-end-line="124" selection-end-column="24" />
           <folding />
         </state>
       </provider>
