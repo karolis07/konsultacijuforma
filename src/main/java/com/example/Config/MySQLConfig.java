@@ -48,7 +48,7 @@ public class MySQLConfig {
         try {
             ResultSet res = st.executeQuery(query);
             while (res.next()) {
-                int id = res.getInt("test_id");
+                int id = res.getInt("ID");
                 String name = res.getString("name");
                 String surname = res.getString("surname");
                 line = String.valueOf(id) + ";" + name + ";" + surname;
@@ -61,10 +61,10 @@ public class MySQLConfig {
         return result;
     }
 
-    public void insertTest(String name, String surname) {
-        String query = String.format("insert into Test(name, surname)" +
-                        "values(\"%s\", \"%s\");\n",
-                name, surname);
+    public void insertTest(int id, String name, String surname) {
+        String query = String.format("insert into Test(id, name, surname)" +
+                        "values(\"%d\",\"%s\", \"%s\");\n",
+                id, name, surname);
         try {
             int value = st.executeUpdate(query);
             if (value == 1)
