@@ -65,4 +65,12 @@ public class NewService {
         mySQLConfig.closeConnection();
         return dataFromDatabase;
     }
+
+    @RequestMapping(value = "/insert", method = RequestMethod.GET)
+    public void doSmth(String id, String name, String surname) {
+        MySQLConfig mySQLConfig = new MySQLConfig();
+        mySQLConfig.connect();
+        mySQLConfig.insertTest(Integer.parseInt(id),name,surname);
+        mySQLConfig.closeConnection();
+    }
 }
