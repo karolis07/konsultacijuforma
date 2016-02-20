@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demoApp" ng-controller="registerController">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <script src="index.js"></script>
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"-->
+          <!--integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">-->
+    <!--<script src="angular.js"></script>-->
+    <!--<script src="angular-route.js"></script>-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>-->
+    <!--<script src="index.js"></script>-->
+    <!--<script src="register.js"></script>-->
+    <!--&lt;!&ndash; Special version of Bootstrap that only affects content wrapped in .bootstrap-iso &ndash;&gt;-->
+    <!--<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />-->
+
+
+    <!--&lt;!&ndash; Inline CSS based on choices in "Settings" tab &ndash;&gt;-->
+    <!--<style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;} .btn{float:right;}</style>-->
+</head>
+<body>
+
+<h1>Registruokitės konsultacijai internetu</h1>
+<!-- HTML Form (wrapped in a .bootstrap-iso div) -->
+<div class="bootstrap-iso">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <form method="post">
+                    <div class="form-group ">
+                        <label class="control-label requiredField" for="name">
+                            Vardas
+       <span class="asteriskField">
+        *
+       </span>
+                        </label>
+                        <input class="form-control" id="name" name="name" type="text"/>
+                    </div>
+                    <div class="form-group ">
+                        <label class="control-label requiredField" for="surname">
+                            Pavardė
+       <span class="asteriskField">
+        *
+       </span>
+                        </label>
+                        <input class="form-control" id="surname" name="surname" type="text"/>
+                    </div>
+                    <div class="form-group ">
+                        <label class="control-label requiredField" for="tel">
+                            Telefonas susisiekti
+       <span class="asteriskField">
+        *
+       </span>
+                        </label>
+                        <input class="form-control" id="tel" name="tel" type="text"/>
+                    </div>
+                    <div class="form-group ">
+                        <label class="control-label " for="email">
+                            El. Pa&scaron;tas
+                        </label>
+                        <input class="form-control" id="email" name="email" type="text"/>
+                    </div>
+                    <div class="form-group ">
+                        <label class="control-label requiredField" for="bank">
+                            Banko skyrius
+       <span class="asteriskField">
+        *
+       </span>
+                        </label>
+                        <select class="select form-control" id="bank" name="bank">
+                            <option value="Pasirinkite" disabled selected hidden>
+                                Pasirinkite
+                            </option>
+                            <option value="Antakalnio g. 45">
+                                Antakalnio g. 45
+                            </option>
+                            <option value='Ateities g. 91 (PC &bdquo;Mandarinas")'>
+                                Ateities g. 91 (PC &bdquo;Mandarinas")
+                            </option>
+                            <option value="Gedimino pr. 56">
+                                Gedimino pr. 56
+                            </option>
+                            <option value="Konstitucijos pr. 20A, dirba Būsto Centras">
+                                Konstitucijos pr. 20A, dirba Būsto Centras
+                            </option>
+                            <option value='Ozo g. 25 (PPC &bdquo;Akropolis")'>
+                                Ozo g. 25 (PPC &bdquo;Akropolis")
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-group" ng-controller="RegisterController">
+                        <label class="control-label requiredField" for="date">
+                            Data
+       <span class="asteriskField">
+        *
+       </span>
+                        </label>
+                        <input class="form-control" id="date" name="date" placeholder="DD/MM/YYYY" type="text"/>
+                    </div>
+                    <div class="form-group ">
+                        <label class="control-label requiredField" for="subject">
+                            Tema
+       <span class="asteriskField">
+        *
+       </span>
+                        </label>
+                        <select class="select form-control" id="subject" name="subject">
+                            <option value="Pasirinkite" disabled selected hidden>
+                                Pasirinkite
+                            </option>
+                            <option value="Taupymas ir investavimas">
+                                Taupymas ir investavimas
+                            </option>
+                            <option value="Pensijos ir kaupimas">
+                                Pensijos ir kaupimas
+                            </option>
+                            <option value="Gyvybės draudimas">
+                                Gyvybės draudimas
+                            </option>
+                            <option value="Ne gyvybės draudimas">
+                                Ne gyvybės draudimas
+                            </option>
+                            <option value="Paskolos, lizingas">
+                                Paskolos, lizingas
+                            </option>
+                            <option value="Kasdienių finansų valdymas">
+                                Kasdienių finansų valdymas
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-group ">
+                        <label class="control-label " for="message">
+                            Pastabos, komentarai
+                        </label>
+                        <textarea class="form-control" cols="40" id="message" name="message" rows="10"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <button class="btn btn-primary " name="submit" type="submit">
+                                Siųsti
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>-->
+
+
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>-->
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>-->
+
+<!--<script>-->
+                <!--$(document).ready(function(){-->
+                    <!--var date_input=$('input[name="date"]'); //our date input has the name "date"-->
+                    <!--var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";-->
+                    <!--date_input.datepicker({-->
+                        <!--format: 'dd/mm/yyyy',-->
+                        <!--container: container,-->
+                        <!--todayHighlight: true,-->
+                        <!--autoclose: true,-->
+                    <!--})-->
+                <!--})-->
+            <!--</script>-->
+
+</body>
+</html>
