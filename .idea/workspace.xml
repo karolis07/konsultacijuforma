@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="539356fd-58ad-4620-b9b1-365d30102ae1" name="Default" comment="try register">
+    <list default="true" id="539356fd-58ad-4620-b9b1-365d30102ae1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/Services/NewService.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/Services/NewService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/index.js" afterPath="$PROJECT_DIR$/src/main/resources/static/index.js" />
     </list>
     <ignored path="US1_BTeam.iws" />
@@ -103,21 +102,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.33442622">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NewService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Services/NewService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.44590163">
-              <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -639,8 +638,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/test.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/index.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/pages/registration.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/index.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/Services/NewService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/index.js" />
       </list>
     </option>
   </component>
@@ -1332,12 +1331,6 @@
       <updated>1455466756306</updated>
       <workItem from="1455812046845" duration="2187000" />
     </task>
-    <task id="LOCAL-00012" summary="testing new DB">
-      <created>1455735530684</created>
-      <option name="number" value="00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1455735530684</updated>
-    </task>
     <task id="LOCAL-00013" summary="testing new DB">
       <created>1455735778916</created>
       <option name="number" value="00013" />
@@ -1626,7 +1619,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456056039458</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="try register">
+      <created>1456056300317</created>
+      <option name="number" value="00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1456056300317</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -2079,21 +2078,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Services/NewService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.44590163">
-          <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33442622">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
