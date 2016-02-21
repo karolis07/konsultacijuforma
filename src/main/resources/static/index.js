@@ -125,6 +125,8 @@ var demoApp = angular.module('demoApp',['ngRoute']);
                 //window.location.href = 'google.com';
            };
 
+
+
 //           angular.element(document).ready(function () {
 //                var date_input=$('input[name="date"]'); //our date input has the name "date"
 //                var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
