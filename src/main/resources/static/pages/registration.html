@@ -12,102 +12,20 @@
 <!-- HTML Form (wrapped in a .bootstrap-iso div) -->
 
                 <form>
+                    Vardas: <input name="name" type="text"/><br>
 
-                        <label>
-                            Vardas
-                        </label>
-                        <input name="name" type="text"/>
+                    Pavardė:<input name="surname" type="text"/><br>
 
+                    Telefonas susisiekti:<input name="tel" type="text"/><br>
 
-                        <label>
-                            Pavardė
-                        </label>
-                        <input name="surname" type="text"/>
-
-
-                        <label>
-                            Telefonas susisiekti
-                        </label>
-                        <input name="tel" type="text"/>
-
-
-                        <label>
-                            El. Pa&scaron;tas
-                        </label>
-                        <input name="email" type="text"/>
-
-
-                        <label>
-                            Banko skyrius
-                        </label>
-                        <select class="select" name="bank">
-                            <option value="Pasirinkite" disabled selected hidden>
-                                Pasirinkite
-                            </option>
-                            <option value="Antakalnio g. 45">
-                                Antakalnio g. 45
-                            </option>
-                            <option value='Ateities g. 91 (PC &bdquo;Mandarinas")'>
-                                Ateities g. 91 (PC &bdquo;Mandarinas")
-                            </option>
-                            <option value="Gedimino pr. 56">
-                                Gedimino pr. 56
-                            </option>
-                            <option value="Konstitucijos pr. 20A, dirba Būsto Centras">
-                                Konstitucijos pr. 20A, dirba Būsto Centras
-                            </option>
-                            <option value='Ozo g. 25 (PPC &bdquo;Akropolis")'>
-                                Ozo g. 25 (PPC &bdquo;Akropolis")
-                            </option>
-                        </select>
-
-                    <div ng-controller="RegisterController">
-                        <label class="requiredField" for="date">
-                            Data
-                        </label>
-                        <input id="date" name="date" placeholder="DD/MM/YYYY" type="text"/>
-                    </div>
-
-
-                        <label>
-                            Tema
-                        </label>
-                        <select class="select" name="subject">
-                            <option value="Pasirinkite" disabled selected hidden>
-                                Pasirinkite
-                            </option>
-                            <option value="Taupymas ir investavimas">
-                                Taupymas ir investavimas
-                            </option>
-                            <option value="Pensijos ir kaupimas">
-                                Pensijos ir kaupimas
-                            </option>
-                            <option value="Gyvybės draudimas">
-                                Gyvybės draudimas
-                            </option>
-                            <option value="Ne gyvybės draudimas">
-                                Ne gyvybės draudimas
-                            </option>
-                            <option value="Paskolos, lizingas">
-                                Paskolos, lizingas
-                            </option>
-                            <option value="Kasdienių finansų valdymas">
-                                Kasdienių finansų valdymas
-                            </option>
-                        </select>
-
-
-                        <label>
-                            Pastabos, komentarai
-                        </label>
-                        <textarea cols="40" name="message" rows="10"></textarea>
+                    El. Pa&scaron;tas:<input name="email" type="text"/><br>
 
 
                             <!--<button class="btn btn-primary " name="submit" type="submit">-->
                                 <!--Siųsti-->
                             <!--</button>-->
 
-                            <input type="submit" value="Register" />
+                    <input type="submit" value="Register" />
 
 
                 </form>
