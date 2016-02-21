@@ -60,11 +60,13 @@ var demoApp = angular.module('demoApp',['ngRoute']);
                 };
             }]);
 
-        demoApp.controller('registerController', [function($scope, $location) {
+        demoApp.controller('testControl', [function($scope, $location){
+            $scope.submit = function(){
+                $location.hash('/inser');
+            }
+        }]);
 
-                    $scope.submit = function(){
-                        $location.url('/blabla');
-                    }
+        demoApp.controller('registerController', [function() {
 
                    angular.element(document).ready(function () {
                         var date_input=$('input[name="date"]'); //our date input has the name "date"
