@@ -73,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="registration.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="registration.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/pages/registration.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37842464">
-              <caret line="82" column="157" selection-start-line="82" selection-start-column="157" selection-end-line="82" selection-end-column="157" />
+            <state vertical-scroll-proportion="-13.730769">
+              <caret line="87" column="28" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -93,11 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.69344264">
+              <caret line="121" column="146" selection-start-line="121" selection-start-column="146" selection-end-line="121" selection-end-column="146" />
               <folding />
             </state>
           </provider>
@@ -651,8 +651,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/Services/NewService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/pages/registration2.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/pages/contact.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/index.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/pages/registration.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/index.js" />
       </list>
     </option>
   </component>
@@ -1344,12 +1344,6 @@
       <updated>1455466756306</updated>
       <workItem from="1455812046845" duration="2187000" />
     </task>
-    <task id="LOCAL-00066" summary="try register">
-      <created>1456057824848</created>
-      <option name="number" value="00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1456057824849</updated>
-    </task>
     <task id="LOCAL-00067" summary="try register">
       <created>1456058175479</created>
       <option name="number" value="00067" />
@@ -1638,7 +1632,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456090386487</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="try register">
+      <created>1456090774708</created>
+      <option name="number" value="00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1456090774708</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -2029,14 +2029,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/pages/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="17.653847">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Services/NewService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.037037">
@@ -2044,14 +2036,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/pages/contact.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.5">
-          <caret line="59" column="83" selection-start-line="59" selection-start-column="83" selection-end-line="59" selection-end-column="83" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2063,18 +2047,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.js">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/pages/contact.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+        <state vertical-scroll-proportion="-20.5">
+          <caret line="59" column="83" selection-start-line="59" selection-start-column="83" selection-end-line="59" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/pages/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="17.653847">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/pages/registration.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37842464">
-          <caret line="82" column="157" selection-start-line="82" selection-start-column="157" selection-end-line="82" selection-end-column="157" />
+        <state vertical-scroll-proportion="-13.730769">
+          <caret line="87" column="28" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.69344264">
+          <caret line="121" column="146" selection-start-line="121" selection-start-column="146" selection-end-line="121" selection-end-column="146" />
           <folding />
         </state>
       </provider>

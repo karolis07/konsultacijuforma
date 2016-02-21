@@ -73,15 +73,20 @@
                             </option>
                         </select>
 
-                    <div>
+                    <!--<div>
                         <label class="control-label requiredField" for="date">
                             Data
                             <span class="asteriskField">
                             *
                             </span>
                         </label>
-                        <input class="form-control" id="date" name="date" ng-model="datepicker.date" placeholder="YYYY-MM-DD" type="text" /><!--datepicker-->
-                    </div>
+                        <input class="form-control" id="date" name="date" ng-model="datepicker.date" placeholder="YYYY-MM-DD" type="text" datepicker/>
+                    </div>-->
+
+                    <label class="control-label " for="date">
+                        Data
+                    </label>
+                    <input id="date" type="datetime" ng-model="date"/>
 
                         <label class="control-label requiredField" for="subject">
                             Tema
