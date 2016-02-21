@@ -20,6 +20,10 @@ var demoApp = angular.module('demoApp',['ngRoute']);
                 controller: 'testControl',
                 templateUrl: 'pages/registration2.html'
             })
+            .when('/insert',
+            {
+                window.location.href = 'http://swedbank-us1bteam.rhcloud.com/#/history';
+            })
             .when('/contact',
             {
                 controller: 'contactController',
@@ -96,7 +100,7 @@ var demoApp = angular.module('demoApp',['ngRoute']);
         demoApp.controller('testControl', function($scope, $location){
             $scope.submit = function(){
                 window.location.href = 'http://swedbank-us1bteam.rhcloud.com/insert?id=' + $scope.id + '&name=' + $scope.name + '&surname=' + $scope.surname;
-                $location.url('/home');
+                //$location.url('/home');
             };
         });
 
