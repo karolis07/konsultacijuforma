@@ -13,35 +13,17 @@ import java.util.Map;
 @RestController
 public class NewService {
 
-//    @RequestMapping(value = "/US1/{dropDownItem}/{textMessage}/{name}/{surname}/{phoneNr}/{email}/{answerType}/", method = RequestMethod.PUT)
-//    public void putContactUs(@PathVariable String dropDownItem,
-//                             @PathVariable String textMessage,
-//                             @PathVariable String name,
-//                             @PathVariable String surname,
-//                             @PathVariable String phoneNr,
-//                             @PathVariable String email,
-//                             @PathVariable String answerType) {
-//        MySQLConfig mysqlConfig = new MySQLConfig();
-//        mysqlConfig.connect();
-//        mysqlConfig.insertContactUsbigTable(dropDownItem, textMessage, answerType, name, surname, phoneNr, email);
-//        mysqlConfig.closeConnection();
-//    }
+//DATE MAGIC
+   // java.util.Date utilDate = new java.util.Date();
+    // System.out.println("Util date in Java : " + utilDate);
+    // contains only date information without time
+    // java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
+    // System.out.println("SQL date in Java : " + sqlDate);
 
-//    @RequestMapping(value = "/US1/{dropDownItem}/{textMessage}/{name}/{phoneNr}/{email}/{answerType}/", method = RequestMethod.PUT)
-//    public void putContactUs(@PathVariable String dropDownItem,
-//                             @PathVariable String textMessage,
-//                             @PathVariable String name,
-//                             @PathVariable String phoneNr,
-//                             @PathVariable String email,
-//                             @PathVariable String answerType) {
-//        putContactUs(   dropDownItem,
-//                textMessage,
-//                name,
-//                "",
-//                phoneNr,
-//                email,
-//                answerType);
-//    }
+//TIME MAGIC
+    //PreparedStatement pstmt = conn.prepareStatement(INSERT_RECORD);
+//    java.sql.Time sqlDate = new java.sql.Time(new java.util.Date().getTime());
+//    pstmt.setTime(2, sqlDate);
 
     @RequestMapping("/sql")
     public Map<String, ArrayList<String>> getAllRegistrations() {
