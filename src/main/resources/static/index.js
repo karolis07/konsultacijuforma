@@ -89,6 +89,22 @@ var demoApp = angular.module('demoApp',['ngRoute']);
                 };
             }]);
 
+        demoApp.directive('jqdatepicker', function () {
+            return {
+                restrict: 'A',
+                require: 'ngModel',
+                 link: function (scope, element, attrs, ngModelCtrl) {
+                    element.datepicker({
+                        dateFormat: 'yyyy-MM-DD',
+                        onSelect: function (date) {
+                            scope.date = date;
+                            scope.$apply();
+                        }
+                    });
+                }
+            };
+        });
+
         demoApp.controller('registerController', function($scope, $location, $http) {
 
 
