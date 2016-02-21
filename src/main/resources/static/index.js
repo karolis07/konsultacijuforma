@@ -18,7 +18,7 @@ var demoApp = angular.module('demoApp',['ngRoute']);
             .when('/register2',
             {
                 controller: 'testControl',
-                templateUrl: 'pages/registration.html'
+                templateUrl: 'pages/registration2.html'
             })
             .when('/contact',
             {
