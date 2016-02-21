@@ -96,7 +96,7 @@ var demoApp = angular.module('demoApp',['ngRoute']);
                         link : function (scope, element, attrs, ngModelCtrl) {
                             $(function(){
                                 element.datepicker({
-                                    dateFormat:'yy-mm-dd',
+                                    dateFormat:"yy-mm-dd",
                                     onSelect:function (date) {
                                         ngModelCtrl.$setViewValue(date);
                                         scope.$apply();
