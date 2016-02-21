@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -67,15 +69,26 @@ public class NewService {
     @RequestMapping(value = "/US2/{name}/{surname}/{tel}/{email}/{bank}/{date}/{subject}/{message}", method = RequestMethod.PUT)
     public void putInRegistrations(
             @PathVariable String name, @PathVariable String surname, @PathVariable String tel,
-            @PathVariable String email, @PathVariable String bank, @PathVariable Date date,
+            @PathVariable String email, @PathVariable String bank, @PathVariable String date,
             @PathVariable String subject, @PathVariable String message)
     {
         MySQLConfig mySQLConfig = new MySQLConfig();
         mySQLConfig.connect();
 
         //DATE MAGIC
-         java.util.Date utilDate = date;
-         java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
+//         java.util.Date utilDate = date;
+//         java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
+
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+
+        Date parsed = null;
+        try {
+            parsed = format.parse(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        java.sql.Date sqlDate = new java.sql.Date(parsed.getTime());
 
         mySQLConfig.insertRegistrations(1,name,surname,tel,email,bank,sqlDate,subject,message);
         mySQLConfig.closeConnection();

@@ -76,8 +76,8 @@ public class MySQLConfig {
             String tel, String email, String bank,
             Date date, String subject, String message ) {
         String query = String.format("INSERT INTO REGISTRATIONS (UserID,Name,Surname,PhoneNo,EMail,BankDepartment,RegistrationDate,RegistrationTime,DropDownList,Message)" +
-                        "values(\"%d\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%D\", \"%T\", \"%s\", \"%s\");\n",
-                userID, name, surname, tel, email, bank, date, "00:00:00", subject, message);
+                        "values(\"%d\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%F\", \"%T\", \"%s\", \"%s\");",
+                userID, name, surname, tel, email, bank, date, "00:00", subject, message);
         try {
             int value = st.executeUpdate(query);
             if (value == 1)
