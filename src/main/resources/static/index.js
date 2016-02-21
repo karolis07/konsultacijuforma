@@ -96,7 +96,7 @@ var demoApp = angular.module('demoApp',['ngRoute']);
 
         demoApp.controller('registerButton', function($scope, $location){
             $scope.submit = function(){
-                $location.url('http://swedbank-us1bteam.rhcloud.com/#/US1/' + $scope.name + '/' + $scope.surname + '/' + $scope.tel + '/' + $scope.email + '/' + $scope.bank + '/' + $scope.date + '/' + $scope.subject + '/' + $scope.message);
+                $location.url('/US1/' + $scope.name + '/' + $scope.surname + '/' + $scope.tel + '/' + $scope.email + '/' + $scope.bank + '/' + $scope.date + '/' + $scope.subject + '/' + $scope.message);
                 //$location.url('/home');
                 //window.location.href = 'google.com';
             };
