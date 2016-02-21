@@ -107,9 +107,9 @@ var demoApp = angular.module('demoApp',['ngRoute']);
         }
 
            $scope.submit = function(){
-                window.location.href = 'http://swedbank-us1bteam.rhcloud.com/#/US1/' + $scope.name + '/' + $scope.surname + '/' + $scope.tel + '/' + $scope.email + '/' + $scope.bank + '/' + $scope.date + '/' + $scope.subject + '/' + $scope.message;
+                //window.location.href = 'http://swedbank-us1bteam.rhcloud.com/#/US1/' + $scope.name + '/' + $scope.surname + '/' + $scope.tel + '/' + $scope.email + '/' + $scope.bank + '/' + $scope.date + '/' + $scope.subject + '/' + $scope.message;
             //$location.url('/home');
-            //window.location.href = 'google.com';
+                window.location.href = 'google.com';
            };
 
            angular.element(document).ready(function () {
