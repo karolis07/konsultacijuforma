@@ -1,38 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="demoApp">
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
-    <!--<script src="index.js"></script>
-    <script src="register.js"></script>-->
+    <script src="index.js"></script>
+    <script src="register.js"></script>
 </head>
 <body>
-<!--<script src="register.js"></script>-->
+
 <h1>Registruokitės konsultacijai internetu</h1>
 <!-- HTML Form (wrapped in a .bootstrap-iso div) -->
-
-                <form>
-                    Vardas: <input name="name" type="text"/><br>
-
-                    Pavardė:<input name="surname" type="text"/><br>
-
-                    Telefonas susisiekti:<input name="tel" type="text"/><br>
-
-                    El. Pa&scaron;tas:<input name="email" type="text"/><br>
-
-
-                            <!--<button class="btn btn-primary " name="submit" type="submit">-->
-                                <!--Siųsti-->
-                            <!--</button>-->
-
-                    <input type="submit" value="Register" />
-
-
-                </form>
-                <!--<form role="form">-->
-                    <!---->
-                <!--</form>-->
-
+<div ng-controller="registerController">
+<form action="#/register" id="registerForm">
+    id:<input type="text" id="id" ng-model="id"><br>
+    name:<input type="text" id="name" ng-model="name"/><br>
+    surname:<input type="text" id="surname" ng-model="surname"/><br>
+    <button type="button" ng-click="submit()"> Register </button>
+</form>
+</div>
 
 
 <!--<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>-->
@@ -42,17 +27,17 @@
 <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>-->
 
 <!--<script>-->
-                <!--$(document).ready(function(){-->
-                    <!--var date_input=$('input[name="date"]'); //our date input has the name "date"-->
-                    <!--var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";-->
-                    <!--date_input.datepicker({-->
-                        <!--format: 'dd/mm/yyyy',-->
-                        <!--container: container,-->
-                        <!--todayHighlight: true,-->
-                        <!--autoclose: true,-->
-                    <!--})-->
-                <!--})-->
-            <!--</script>-->
+<!--$(document).ready(function(){-->
+<!--var date_input=$('input[name="date"]'); //our date input has the name "date"-->
+<!--var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";-->
+<!--date_input.datepicker({-->
+<!--format: 'dd/mm/yyyy',-->
+<!--container: container,-->
+<!--todayHighlight: true,-->
+<!--autoclose: true,-->
+<!--})-->
+<!--})-->
+<!--</script>-->
 
 </body>
 </html>

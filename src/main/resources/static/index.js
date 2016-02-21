@@ -60,7 +60,12 @@ var demoApp = angular.module('demoApp',['ngRoute']);
                 };
             }]);
 
-        demoApp.controller('registerController', [function() {
+        demoApp.controller('registerController', [function($scope, $location) {
+
+                    $scope.submit = function(){
+                        $location.path('/insert?id=' + $scope.id +'&name=' + $scope.name + '&surname' + $scope.surname);
+                    }
+
                    angular.element(document).ready(function () {
                         var date_input=$('input[name="date"]'); //our date input has the name "date"
                         var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
