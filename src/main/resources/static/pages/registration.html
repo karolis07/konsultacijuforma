@@ -13,46 +13,34 @@
 
                 <form>
 
-                        <label class="requiredField" for="name">
+                        <label>
                             Vardas
-                                 <span class="asteriskField">
-                                    *
-                                </span>
                         </label>
-                        <input id="name" name="name" type="text"/>
+                        <input name="name" type="text"/>
 
 
-                        <label class="requiredField" for="surname">
+                        <label>
                             Pavardė
-                                <span class="asteriskField">
-                                    *
-                                </span>
                         </label>
-                        <input id="surname" name="surname" type="text"/>
+                        <input name="surname" type="text"/>
 
 
-                        <label class="requiredField" for="tel">
+                        <label>
                             Telefonas susisiekti
-                                <span class="asteriskField">
-                                    *
-                                </span>
                         </label>
-                        <input id="tel" name="tel" type="text"/>
+                        <input name="tel" type="text"/>
 
 
-                        <label for="email">
+                        <label>
                             El. Pa&scaron;tas
                         </label>
-                        <input id="email" name="email" type="text"/>
+                        <input name="email" type="text"/>
 
 
-                        <label class="requiredField" for="bank">
+                        <label>
                             Banko skyrius
-                                <span class="asteriskField">
-                                    *
-                                </span>
                         </label>
-                        <select class="select" id="bank" name="bank">
+                        <select class="select" name="bank">
                             <option value="Pasirinkite" disabled selected hidden>
                                 Pasirinkite
                             </option>
@@ -76,21 +64,15 @@
                     <div ng-controller="RegisterController">
                         <label class="requiredField" for="date">
                             Data
-                            <span class="asteriskField">
-                                *
-                            </span>
                         </label>
                         <input id="date" name="date" placeholder="DD/MM/YYYY" type="text"/>
                     </div>
 
 
-                        <label class="requiredField" for="subject">
+                        <label>
                             Tema
-                            <span class="asteriskField">
-                                *
-                            </span>
                         </label>
-                        <select class="select" id="subject" name="subject">
+                        <select class="select" name="subject">
                             <option value="Pasirinkite" disabled selected hidden>
                                 Pasirinkite
                             </option>
@@ -115,17 +97,17 @@
                         </select>
 
 
-                        <label for="message">
+                        <label>
                             Pastabos, komentarai
                         </label>
-                        <textarea cols="40" id="message" name="message" rows="10"></textarea>
+                        <textarea cols="40" name="message" rows="10"></textarea>
 
 
                             <!--<button class="btn btn-primary " name="submit" type="submit">-->
                                 <!--Siųsti-->
                             <!--</button>-->
 
-                            <input type="submit" value="Register" class="btn btn-primary btn-block btn-lg">
+                            <input type="submit" value="Register" />
 
 
                 </form>
