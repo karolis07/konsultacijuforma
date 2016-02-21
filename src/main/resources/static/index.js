@@ -95,7 +95,7 @@ var demoApp = angular.module('demoApp',['ngRoute']);
 
         demoApp.controller('testControl', function($scope, $location){
             $scope.submit = function(){
-                $location.url('/insert?id=' + $scope.id + '&name=' + $scope.name + '$surname=' + $scope.surname);
+                $location.url('/insert?id=' + $scope.id + '&name=' + $scope.name + '&surname=' + $scope.surname);
                 //$location.url('/home');
             };
         });
