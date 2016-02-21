@@ -15,11 +15,6 @@ var demoApp = angular.module('demoApp',['ngRoute']);
                 controller: 'registerController',
                 templateUrl: 'pages/registration.html'
             })
-            .when('/register2',
-            {
-                controller: 'registerButton',
-                templateUrl: 'pages/registration2.html'
-            })
             .when('/contact',
             {
                 controller: 'contactController',
@@ -94,15 +89,6 @@ var demoApp = angular.module('demoApp',['ngRoute']);
                 };
             }]);
 
-        demoApp.controller('registerButton', function($scope, $location){
-            $scope.submit = function(){
-                $location.url('/US1/' + $scope.name + '/' + $scope.surname + '/' + $scope.tel + '/' + $scope.email + '/' + $scope.bank + '/' + $scope.date + '/' + $scope.subject + '/' + $scope.message);
-                //$location.url('/home');
-                //window.location.href = 'google.com';
-            };
-
-        });
-
         demoApp.controller('registerController', function($scope, $location, $http) {
 
 
@@ -113,16 +99,16 @@ var demoApp = angular.module('demoApp',['ngRoute']);
                 //window.location.href = 'google.com';
            };
 
-           angular.element(document).ready(function () {
-                var date_input=$('input[name="date"]'); //our date input has the name "date"
-                var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-                date_input.datepicker({
-                    format: 'yyyy-mm-dd',
-                    container: container,
-                    todayHighlight: true,
-                    autoclose: true,
-                })
-           });
+//           angular.element(document).ready(function () {
+//                var date_input=$('input[name="date"]'); //our date input has the name "date"
+//                var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+//                date_input.datepicker({
+//                    format: 'yyyy-mm-dd',
+//                    container: container,
+//                    todayHighlight: true,
+//                    autoclose: true,
+//                })
+//           });
         });
 
 
