@@ -7,8 +7,8 @@ var demoApp = angular.module('demoApp',['ngRoute']);
         $routeProvider
             .when('/',
             {
-                controller: 'homeController',
-                templateUrl: 'pages/home.html'
+                controller: 'loginController',
+                templateUrl: 'pages/login.html'
             })
             .when('/register',
             {
@@ -21,16 +21,44 @@ var demoApp = angular.module('demoApp',['ngRoute']);
                 templateUrl: 'pages/contact.html'
             })
             .when('/history',
-                        {
-                            controller: 'historyController',
-                            templateUrl: 'pages/history.html'
-                        })
-            .when('/login',
-                {
-                    controller: 'loginController',
-                    templateUrl: 'pages/login.html'
-                })
+            {
+                 controller: 'historyController',
+                 templateUrl: 'pages/history.html'
+            })
+            .when('/home',
+            {
+                controller: 'homeController',
+                templateUrl: 'pages/home.html'
+            })
+            .when('/test',
+            {
+                controller: 'ContactCtrl',
+                templateUrl: 'pages/test.html'
+            })
             .otherwise({ redirectTo: '/'});
+        });
+
+//        demoapp.controller('loginCrtl', function($scope, $location)
+//        {
+//            $scope.submit = function()
+//            {
+//                if($scope.username == 'admin' $$ $scope.password == 'admin')
+//                {
+//                    $rootScope.username = $scope.username;
+//                    $rootScope.password = $scope.password;
+//                    $location.path('/home');
+//                }else
+//                {
+//                    alert('Wrong stuff')
+//                }
+//            };
+//        });
+
+        demoApp.controller('ContactCtrl',function($scope, $http)
+        {
+            $scope.UpdateData = function () {
+                    $http.put('/US1/'+$('#inputid').val()+'/'+$('#inputFirstname').val()+'/'+$('#inputLastname').val()+'/')
+                };
         });
 
         demoApp.controller('cookieController', ['$scope', function($scope) {
