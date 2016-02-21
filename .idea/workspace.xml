@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="539356fd-58ad-4620-b9b1-365d30102ae1" name="Default" comment="">
+    <list default="true" id="539356fd-58ad-4620-b9b1-365d30102ae1" name="Default" comment="try register">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/index.js" afterPath="$PROJECT_DIR$/src/main/resources/static/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/pages/registration.html" afterPath="$PROJECT_DIR$/src/main/resources/static/pages/registration.html" />
     </list>
     <ignored path="US1_BTeam.iws" />
@@ -75,8 +76,8 @@
       <file leaf-file-name="registration.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/pages/registration.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.494863">
-              <caret line="86" column="49" selection-start-line="86" selection-start-column="49" selection-end-line="86" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.64041096">
+              <caret line="91" column="59" selection-start-line="91" selection-start-column="59" selection-end-line="91" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -96,7 +97,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="121" column="146" selection-start-line="121" selection-start-column="146" selection-end-line="121" selection-end-column="146" />
+              <caret line="117" column="46" selection-start-line="117" selection-start-column="28" selection-end-line="117" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -1343,12 +1344,6 @@
       <updated>1455466756306</updated>
       <workItem from="1455812046845" duration="2187000" />
     </task>
-    <task id="LOCAL-00069" summary="try register">
-      <created>1456058568842</created>
-      <option name="number" value="00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1456058568842</updated>
-    </task>
     <task id="LOCAL-00070" summary="try register">
       <created>1456058984186</created>
       <option name="number" value="00070" />
@@ -1637,7 +1632,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456091869357</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="try register">
+      <created>1456092064823</created>
+      <option name="number" value="00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1456092064823</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -2065,15 +2066,15 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="121" column="146" selection-start-line="121" selection-start-column="146" selection-end-line="121" selection-end-column="146" />
+          <caret line="117" column="46" selection-start-line="117" selection-start-column="28" selection-end-line="117" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/pages/registration.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.494863">
-          <caret line="86" column="49" selection-start-line="86" selection-start-column="49" selection-end-line="86" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.64041096">
+          <caret line="91" column="59" selection-start-line="91" selection-start-column="59" selection-end-line="91" selection-end-column="59" />
           <folding />
         </state>
       </provider>
