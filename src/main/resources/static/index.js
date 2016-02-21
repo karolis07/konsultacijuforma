@@ -107,12 +107,20 @@ var demoApp = angular.module('demoApp',['ngRoute']);
                     }
                 });
 
+        demoApp.controller('contactController',function($scope, $http, $location)
+        {
+            $scope.submit = function () {
+                    $http.put('/US3/'+$scope.theme+'/'+$scope.InputMessage+'/'+$scope.first_name+'/'+$scope.last_name+'/'+$scope.phone_number+'/'+$scope.email+'/'+$scope.answer+'/');
+                    $location.url('/home');
+            };
+        });
+
         demoApp.controller('registerController', function($scope, $location, $http) {
 
 
            $scope.submit = function(){
-                $http.put('/US2/' + $scope.name + '/' + $scope.surname + '/' + $scope.tel + '/' + $scope.email + '/' + $scope.bank + '/' + $scope.datepicker.date + '/' + $scope.subject + '/' + $scope.message);
-                //$location.url('/home');
+                $http.put('/US2/' + $scope.name + '/' + $scope.surname + '/' + $scope.tel + '/' + $scope.email + '/' + $scope.bank + '/' + $scope.date + '/' + $scope.subject + '/' + $scope.message);
+                $location.url('/home');
             //$location.url('/home');
                 //window.location.href = 'google.com';
            };
