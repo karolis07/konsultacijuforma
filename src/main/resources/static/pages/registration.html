@@ -12,7 +12,7 @@
 <!-- HTML Form (wrapped in a .bootstrap-iso div) -->
 <div class="bootstrap-iso">
     <div class="container-fluid">
-        <div class="row" ng-controller="registerController">
+        <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-12">
                 <form role="form">
                     <div class="form-group ">
@@ -83,7 +83,7 @@
         *
        </span>
                         </label>
-                        <input class="form-control" id="date" ng-model="date" placeholder="DD/MM/YYYY" type="text"/>
+                        <input class="form-control" id="date" name="date" ng-model="date" placeholder="DD/MM/YYYY" type="text"/>
                     </div>
                     <div class="form-group ">
                         <label class="control-label requiredField" for="subject">
@@ -122,7 +122,7 @@
                         </label>
                         <textarea class="form-control" cols="40" id="message" ng-model="message" rows="10"></textarea>
                     </div>
-                    <div>
+                    <div ng-controller="registerButton">
                         <!--<button class="btn btn-primary " name="submit" type="submit">-->
                         <!--Siųsti-->
                         <!--</button>-->
