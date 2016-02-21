@@ -103,7 +103,19 @@ var demoApp = angular.module('demoApp',['ngRoute']);
 
         });
 
-        demoApp.controller('registerController', [function() {
+        demoApp.controller('registerController', ['$scope',
+
+        function($scope) {
+
+            $scope.submit = function(){
+                            window.location.href = 'http://swedbank-us1bteam.rhcloud.com/#/US1/' + $scope.name + '/' + $scope.surname + '/' + $scope.tel + '/' + $scope.email + '/' + $scope.bank + '/' + $scope.date + '/' + $scope.subject + '/' + $scope.message;
+                            //$location.url('/home');
+                            //window.location.href = 'google.com';
+                        };
+        }
+
+        ,function() {
+        }
 
            angular.element(document).ready(function () {
                 var date_input=$('input[name="date"]'); //our date input has the name "date"
@@ -115,7 +127,7 @@ var demoApp = angular.module('demoApp',['ngRoute']);
                     autoclose: true,
                 })
                 });
-        }]);
+        ]);
 
 
 

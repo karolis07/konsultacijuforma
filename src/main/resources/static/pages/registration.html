@@ -14,7 +14,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-12">
-                <form>
+                <form id="registrationForm">
                         <label class="control-label requiredField" for="name">
                             Vardas
        <span class="asteriskField">
@@ -116,13 +116,11 @@
                         </label>
                         <textarea class="form-control" cols="40" id="message" ng-model="message" rows="10"></textarea>
 
-                    <div ng-controller="registerButton">
                         <!--<button class="btn btn-primary " name="submit" type="submit">-->
                         <!--Siųsti-->
                         <!--</button>-->
                         <hr class="colorgraph">
                         <button type="button" ng-click="submit()" class="btn btn-primary btn-block btn-lg">Registruoti</button>
-                    </div>
 
                 </form>
                 <!--<form role="form">-->
