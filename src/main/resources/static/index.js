@@ -103,7 +103,7 @@ var demoApp = angular.module('demoApp',['ngRoute']);
 
         });
 
-        demoApp.controller('registerController', ['$scope', function($scope) {
+        demoApp.controller('registerController', function($scope) {
 
 
            $scope.submit = function(){
@@ -122,7 +122,7 @@ var demoApp = angular.module('demoApp',['ngRoute']);
                     autoclose: true,
                 })
            });
-        }]);
+        });
 
 
 
