@@ -17,7 +17,7 @@ var demoApp = angular.module('demoApp',['ngRoute']);
             })
             .when('/register2',
             {
-                controller: 'testControl',
+                controller: 'registerButton',
                 templateUrl: 'pages/registration2.html'
             })
             .when('/contact',
@@ -94,28 +94,35 @@ var demoApp = angular.module('demoApp',['ngRoute']);
                 };
             }]);
 
-        demoApp.controller('testControl', function($scope, $location){
+        demoApp.controller('registerButton', function($scope, $location){
             $scope.submit = function(){
-                window.location.href = 'http://swedbank-us1bteam.rhcloud.com/insert?id=' + $scope.id + '&name=' + $scope.name + '&surname=' + $scope.surname;
-                setTimer(window.location.href = 'http://swedbank-us1bteam.rhcloud.com/#/history', 3000);
+                $location.url('/US1/' + $scope.name + '/' + $scope.surname + '/' + $scope.tel + '/' + $scope.email + '/' + $scope.bank + '/' + $scope.date + '/' + $scope.subject + '/' + $scope.message);
                 //$location.url('/home');
+                //window.location.href = 'google.com';
             };
 
         });
 
-        demoApp.controller('registerController', [function() {
+        demoApp.controller('registerController', function($scope) {
 
-                   angular.element(document).ready(function () {
-                        var date_input=$('input[name="date"]'); //our date input has the name "date"
-                        var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-                        date_input.datepicker({
-                            format: 'dd/mm/yyyy',
-                            container: container,
-                            todayHighlight: true,
-                            autoclose: true,
-                        })
-                        });
-                     }]);
+
+           $scope.submit = function(){
+                window.location.href = 'http://swedbank-us1bteam.rhcloud.com/#/US1/' + $scope.name + '/' + $scope.surname + '/' + $scope.tel + '/' + $scope.email + '/' + $scope.bank + '/' + $scope.date + '/' + $scope.subject + '/' + $scope.message;
+            //$location.url('/home');
+                //window.location.href = 'google.com';
+           };
+
+           angular.element(document).ready(function () {
+                var date_input=$('input[name="date"]'); //our date input has the name "date"
+                var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+                date_input.datepicker({
+                    format: 'dd/mm/yyyy',
+                    container: container,
+                    todayHighlight: true,
+                    autoclose: true,
+                })
+           });
+        });
 
 
 

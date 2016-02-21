@@ -13,49 +13,44 @@
 <div class="bootstrap-iso">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6 col-sm-6 col-xs-12">
-                <form role="form">
-                    <div class="form-group ">
+            <div ng-controller="registerController" class="col-md-6 col-sm-6 col-xs-12">
+                <form id="registrationForm">
                         <label class="control-label requiredField" for="name">
                             Vardas
        <span class="asteriskField">
         *
        </span>
                         </label>
-                        <input class="form-control" id="name" name="name" type="text"/>
-                    </div>
-                    <div class="form-group ">
+                        <input class="form-control" id="name" ng-model="name" type="text"/>
+
                         <label class="control-label requiredField" for="surname">
                             Pavardė
        <span class="asteriskField">
         *
        </span>
                         </label>
-                        <input class="form-control" id="surname" name="surname" type="text"/>
-                    </div>
-                    <div class="form-group ">
+                        <input class="form-control" id="surname" ng-model="surname" type="text"/>
+
                         <label class="control-label requiredField" for="tel">
                             Telefonas susisiekti
        <span class="asteriskField">
         *
        </span>
                         </label>
-                        <input class="form-control" id="tel" name="tel" type="text"/>
-                    </div>
-                    <div class="form-group ">
+                        <input class="form-control" id="tel" ng-model="tel" type="text"/>
+
                         <label class="control-label " for="email">
                             El. Pa&scaron;tas
                         </label>
-                        <input class="form-control" id="email" name="email" type="text"/>
-                    </div>
-                    <div class="form-group ">
+                        <input class="form-control" id="email" ng-model="email" type="text"/>
+
                         <label class="control-label requiredField" for="bank">
                             Banko skyrius
        <span class="asteriskField">
         *
        </span>
                         </label>
-                        <select class="select form-control" id="bank" name="bank">
+                        <select class="select form-control" id="bank" ng-model="bank">
                             <option value="Pasirinkite" disabled selected hidden>
                                 Pasirinkite
                             </option>
@@ -75,24 +70,24 @@
                                 Ozo g. 25 (PPC &bdquo;Akropolis")
                             </option>
                         </select>
-                    </div>
-                    <div class="form-group" ng-controller="RegisterController">
+
+                    <div ng-controller="registerController">
                         <label class="control-label requiredField" for="date">
                             Data
-       <span class="asteriskField">
-        *
-       </span>
+                            <span class="asteriskField">
+                            *
+                            </span>
                         </label>
-                        <input class="form-control" id="date" name="date" placeholder="DD/MM/YYYY" type="text"/>
+                        <input class="form-control" id="date" name="date" ng-model="date" placeholder="DD/MM/YYYY" type="text"/>
                     </div>
-                    <div class="form-group ">
+
                         <label class="control-label requiredField" for="subject">
                             Tema
        <span class="asteriskField">
         *
        </span>
                         </label>
-                        <select class="select form-control" id="subject" name="subject">
+                        <select class="select form-control" id="subject" ng-model="subject">
                             <option value="Pasirinkite" disabled selected hidden>
                                 Pasirinkite
                             </option>
@@ -115,26 +110,22 @@
                                 Kasdienių finansų valdymas
                             </option>
                         </select>
-                    </div>
-                    <div class="form-group ">
+
                         <label class="control-label " for="message">
                             Pastabos, komentarai
                         </label>
-                        <textarea class="form-control" cols="40" id="message" name="message" rows="10"></textarea>
-                    </div>
-                    <div>
+                        <textarea class="form-control" cols="40" id="message" ng-model="message" rows="10"></textarea>
+
                         <!--<button class="btn btn-primary " name="submit" type="submit">-->
                         <!--Siųsti-->
                         <!--</button>-->
                         <hr class="colorgraph">
-                        <input type="submit" value="Register" class="btn btn-primary btn-block btn-lg">
-                    </div>
+                        <button type="button" ng-click="submit()" class="btn btn-primary btn-block btn-lg">Registruoti</button>
 
                 </form>
                 <!--<form role="form">-->
                 <!---->
                 <!--</form>-->
-            </div>
         </div>
     </div>
 </div>
