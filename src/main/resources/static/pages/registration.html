@@ -13,7 +13,7 @@
 <div class="bootstrap-iso">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6 col-sm-6 col-xs-12">
+            <div ng-controller="registerController" class="col-md-6 col-sm-6 col-xs-12">
                 <form id="registrationForm">
                         <label class="control-label requiredField" for="name">
                             Vardas
@@ -71,7 +71,7 @@
                             </option>
                         </select>
 
-                    <div ng-controller="RegisterController">
+                    <div ng-controller="registerController">
                         <label class="control-label requiredField" for="date">
                             Data
                             <span class="asteriskField">
