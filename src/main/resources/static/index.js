@@ -103,11 +103,12 @@ var demoApp = angular.module('demoApp',['ngRoute']);
 
         });
 
-        demoApp.controller('registerController', function($scope) {
+        demoApp.controller('registerController', function($scope, $location, $http) {
 
 
            $scope.submit = function(){
-                window.location.href = 'http://swedbank-us1bteam.rhcloud.com/US2/' + $scope.name + '/' + $scope.surname + '/' + $scope.tel + '/' + $scope.email + '/' + $scope.bank + '/' + $scope.date + '/' + $scope.subject + '/' + $scope.message;
+                $http.put('/US2/' + $scope.name + '/' + $scope.surname + '/' + $scope.tel + '/' + $scope.email + '/' + $scope.bank + '/' + $scope.date + '/' + $scope.subject + '/' + $scope.message);
+                $location.url('/home');
             //$location.url('/home');
                 //window.location.href = 'google.com';
            };
