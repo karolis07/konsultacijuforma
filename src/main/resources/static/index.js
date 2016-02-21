@@ -112,7 +112,7 @@ var demoApp = angular.module('demoApp',['ngRoute']);
 
            $scope.submit = function(){
                 $http.put('/US2/' + $scope.name + '/' + $scope.surname + '/' + $scope.tel + '/' + $scope.email + '/' + $scope.bank + '/' + $('#date').val() + '/' + $scope.subject + '/' + $scope.message);
-                $location.url('/home');
+                //$location.url('/home');
             //$location.url('/home');
                 //window.location.href = 'google.com';
            };
