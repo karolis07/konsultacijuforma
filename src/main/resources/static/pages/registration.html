@@ -84,16 +84,11 @@
                         <input class="form-control" id="date" name="date" ng-model="datepicker.date" placeholder="YYYY-MM-DD" type="text" datepicker/>
                     </div>-->
 
-                    <label class="control-label " for="date">
+                    <label class="control-label ">
                         Data
                     </label>
-                    <script>
-                        $(function() {
-                             $( "#date" ).datepicker();
-                        });
-                    </script>
 
-                    <p>Calendar: <input type="text" id="date" ng-model="date" /></p>
+                    <md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
 
                         <label class="control-label requiredField" for="subject">
                             Tema
