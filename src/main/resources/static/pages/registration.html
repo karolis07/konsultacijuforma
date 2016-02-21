@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
+    <script src="angular.js"></script>
+    <script src="angular-route.js"></script>
     <script src="index.js"></script>
     <script src="register.js"></script>
 </head>
 <body>
-<script src="register.js"></script>
+
 <h1>Registruokitės konsultacijai internetu</h1>
 <!-- HTML Form (wrapped in a .bootstrap-iso div) -->
 <div class="bootstrap-iso">
@@ -78,7 +80,7 @@
                             *
                             </span>
                         </label>
-                        <input class="form-control" id="date" name="date" ng-model="datepicker.date" placeholder="YYYY-MM-DD" type="text" datepicker/>
+                        <input class="form-control" id="date" name="date" ng-model="datepicker.date" placeholder="YYYY-MM-DD" type="text" /><!--datepicker-->
                     </div>
 
                         <label class="control-label requiredField" for="subject">
