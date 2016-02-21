@@ -75,11 +75,9 @@ public class NewService {
         MySQLConfig mySQLConfig = new MySQLConfig();
         mySQLConfig.connect();
 
-        //DATE MAGIC
-//         java.util.Date utilDate = date;
-//         java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
+        date += " 12:00";
 
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 
         Date parsed = null;
         try {
@@ -89,8 +87,9 @@ public class NewService {
         }
 
         java.sql.Date sqlDate = new java.sql.Date(parsed.getTime());
+        java.sql.Time sqlTime = new java.sql.Time(parsed.getTime());
 
-        mySQLConfig.insertRegistrations(1,name,surname,tel,email,bank,sqlDate,subject,message);
+        mySQLConfig.insertRegistrations(1,name,surname,tel,email,bank,sqlDate,sqlTime,subject,message);
         mySQLConfig.closeConnection();
     }
 

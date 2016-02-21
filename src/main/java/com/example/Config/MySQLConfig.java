@@ -60,8 +60,7 @@ public class MySQLConfig {
 
     public void insertTest(int id, String name, String surname) {
         String query = String.format("insert into Test(id, name, surname)" +
-                        "values(\"%d\",\"%s\", \"%s\");\n",
-                id, name, surname);
+                        "values("+id+","+name+","+surname+");\n");
         try {
             int value = st.executeUpdate(query);
             if (value == 1)
@@ -74,10 +73,10 @@ public class MySQLConfig {
     public void insertRegistrations(
             int userID, String name, String surname,
             String tel, String email, String bank,
-            Date date, String subject, String message ) {
+            Date date, Time time, String subject, String message ) {
         String query = String.format("INSERT INTO REGISTRATIONS (UserID,Name,Surname,PhoneNo,EMail,BankDepartment,RegistrationDate,RegistrationTime,DropDownList,Message)" +
                         "values(\"%d\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%F\", \"%T\", \"%s\", \"%s\");",
-                userID, name, surname, tel, email, bank, date, "00:00", subject, message);
+                userID, name, surname, tel, email, bank, date, time, subject, message);
         try {
             int value = st.executeUpdate(query);
             if (value == 1)
