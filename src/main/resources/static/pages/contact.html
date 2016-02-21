@@ -28,11 +28,11 @@
     <div class="featurette" id="about">
         <!------------------------code---------------start---------------->
         <div class="container">
-            <div class="row" style="margin-left: 30%;">
+            <div ng-controller="contactController" class="row" style="margin-left: 30%;">
                 <form role="form">
                     <div class="col-lg-6">
                         <div class="form-group">
-                            <select>
+                            <select id="theme" ng-model="theme">
                                 <option value="" disabled="disabled" selected="selected">Pasirinkite temą</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
@@ -42,43 +42,43 @@
                         <div class="form-group">
                             <label for="InputMessage">Žinutės tekstas</label>
                             <div class="input-group">
-                                <textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" required></textarea>
+                                <textarea ng-model="InputMessage" id="InputMessage" class="form-control" rows="5" required></textarea>
                                 <span class="input-group-addon"></span>
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="text" name="first_name" id="first_name" class="form-control input-lg"
+                            <input type="text" ng-model="first_name" id="first_name" class="form-control input-lg"
                                    placeholder="Vardas" tabindex="1">
                         </div>
 
 
                         <div class="form-group">
-                            <input type="text" name="last_name" id="last_name" class="form-control input-lg"
+                            <input type="text" ng-model="last_name" id="last_name" class="form-control input-lg"
                                    placeholder="Pavardė" tabindex="2">
                         </div>
                         <div class="form-group">
-                            <input type="tel" name="phone_number" id="phone_number" class="form-control input-lg"
+                            <input type="tel" ng-model="phone_number" id="phone_number" class="form-control input-lg"
                                    placeholder="Telefonas susisiekti" tabindex="3">
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" id="email" class="form-control input-lg"
+                            <input type="email" ng-model="email" id="email" class="form-control input-lg"
                                    placeholder="El. Paštas" tabindex="4">
                         </div>
 
                         <div class="form-group">
                             <label for="InputMessage">Kaip pageidaujate gauti atsakymą?</label>
-                            <input type="radio" name="answer" value="phone" checked> Telefonu<br>
-                            <input type="radio" name="answer" value="email"> El. Paštu<br>
-                            <input type="radio" name="answer" value="both"> El. Paštu ir telefonu
+                            <input type="radio" ng-model="answer" value="phone" checked> Telefonu<br>
+                            <input type="radio" ng-model="answer" value="email"> El. Paštu<br>
+                            <input type="radio" ng-model="answer" value="both"> El. Paštu ir telefonu
                         </div>
 
-                        <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
+                        <button type="button" ng-click="submit()" id="submit" class="btn btn-info pull-right"> Submit </button>
                     </div>
                 </form>
 
             </div>
-
-
+        </div>
+        </div>
             <!----Code------end----------------------------------->
         </div>
         <!-- /.container -->
