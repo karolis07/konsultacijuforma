@@ -60,10 +60,10 @@ var demoApp = angular.module('demoApp',['ngRoute']);
                 };
             }]);
 
-        demoApp.controller('registerController', [function($scope, $location) {
+        demoApp.controller('registerController', [function($scope) {
 
                     $scope.submit = function(){
-                        $location.path('/insert?id=' + $scope.id +'&name=' + $scope.name + '&surname' + $scope.surname);
+                        window.location = '/insert?id=' + $scope.id +'&name=' + $scope.name + '&surname' + $scope.surname;
                     }
 
                    angular.element(document).ready(function () {
