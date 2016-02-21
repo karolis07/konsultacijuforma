@@ -1,10 +1,7 @@
 package com.example.Config;
 
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class MySQLConfig {
@@ -65,6 +62,22 @@ public class MySQLConfig {
         String query = String.format("insert into Test(id, name, surname)" +
                         "values(\"%d\",\"%s\", \"%s\");\n",
                 id, name, surname);
+        try {
+            int value = st.executeUpdate(query);
+            if (value == 1)
+                System.out.println("Successfully inserted value");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public void insertRegistrations(
+            int userID, String name, String surname,
+            String tel, String email, String bank,
+            Date date, String subject, String message ) {
+        String query = String.format("INSERT INTO REGISTRATIONS (UserID,Name,Surname,PhoneNo,EMail,BankDepartment,RegistrationDate,RegistrationTime,DropDownList,Message)" +
+                        "values(\"%d\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%D\", \"%T\", \"%s\", \"%s\");\n",
+                userID, name, surname, tel, email, bank, date, "00:00:00", subject, message);
         try {
             int value = st.executeUpdate(query);
             if (value == 1)

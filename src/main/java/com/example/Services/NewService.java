@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -56,10 +57,29 @@ public class NewService {
         mySQLConfig.closeConnection();
     }
     @RequestMapping(value = "/US1/{id}/{name}/{surname}", method = RequestMethod.PUT)
-    public void doSmth2(@PathVariable String id, @PathVariable String name, @PathVariable String surname) {
+    public void putInTest(@PathVariable String id, @PathVariable String name, @PathVariable String surname) {
         MySQLConfig mySQLConfig = new MySQLConfig();
         mySQLConfig.connect();
         mySQLConfig.insertTest(Integer.parseInt(id),name,surname);
         mySQLConfig.closeConnection();
     }
+
+    @RequestMapping(value = "/US2/{name}/{surname}/{tel}/{email}/{bank}/{date}/{subject}/{message}", method = RequestMethod.PUT)
+    public void putInRegistrations(
+            @PathVariable String name, @PathVariable String surname, @PathVariable String tel,
+            @PathVariable String email, @PathVariable String bank, @PathVariable Date date,
+            @PathVariable String subject, @PathVariable String message)
+    {
+        MySQLConfig mySQLConfig = new MySQLConfig();
+        mySQLConfig.connect();
+
+        //DATE MAGIC
+         java.util.Date utilDate = date;
+         java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
+
+        mySQLConfig.insertRegistrations(1,name,surname,tel,email,bank,sqlDate,subject,message);
+        mySQLConfig.closeConnection();
+    }
+
+
 }
