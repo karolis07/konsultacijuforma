@@ -63,7 +63,7 @@ var demoApp = angular.module('demoApp',['ngRoute']);
         demoApp.controller('registerController', [function($scope) {
 
                     $scope.submit = function(){
-                        window.location = '/insert?id=' + $scope.id +'&name=' + $scope.name + '&surname' + $scope.surname;
+                        $location.url('/blabla');
                     }
 
                    angular.element(document).ready(function () {
