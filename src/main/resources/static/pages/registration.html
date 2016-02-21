@@ -7,6 +7,7 @@
     <script src="angular-route.js"></script>
     <script src="index.js"></script>
     <script src="register.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
 </head>
 <body>
 
@@ -86,7 +87,13 @@
                     <label class="control-label " for="date">
                         Data
                     </label>
-                    <input id="date" type="datetime" ng-model="date"/>
+                    <script>
+                        $(function() {
+                             $( "#date" ).datepicker();
+                        });
+                    </script>
+
+                    <p>Calendar: <input type="text" id="date" ng-model="date" /></p>
 
                         <label class="control-label requiredField" for="subject">
                             Tema
