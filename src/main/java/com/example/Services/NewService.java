@@ -66,7 +66,7 @@ public class NewService {
         return dataFromDatabase;
     }
 
-    @RequestMapping(value = "/insert", method = RequestMethod.GET)
+    @RequestMapping(value = "/insert", method = RequestMethod.PUT)
     public void doSmth(String id, String name, String surname) {
         MySQLConfig mySQLConfig = new MySQLConfig();
         mySQLConfig.connect();
