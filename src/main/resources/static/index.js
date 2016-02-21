@@ -103,19 +103,23 @@ var demoApp = angular.module('demoApp',['ngRoute']);
 
         });
 
-        demoApp.controller('registerController', [function() {
+        demoApp.controller('registerController', ['$scope', function($scope) {
 
-                   angular.element(document).ready(function () {
-                        var date_input=$('input[name="date"]'); //our date input has the name "date"
-                        var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-                        date_input.datepicker({
-                            format: 'dd/mm/yyyy',
-                            container: container,
-                            todayHighlight: true,
-                            autoclose: true,
-                        })
-                        });
-                     }]);
+            $scope.submit = function(){
+                window.location.href = 'http://swedbank-us1bteam.rhcloud.com/#/US1/' + $scope.id + '&name=' + $scope.name + '&surname=' + $scope.surname;
+            };
+
+           angular.element(document).ready(function () {
+                var date_input=$('input[name="date"]'); //our date input has the name "date"
+                var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+                date_input.datepicker({
+                    format: 'dd/mm/yyyy',
+                    container: container,
+                    todayHighlight: true,
+                    autoclose: true,
+                })
+                });
+        }]);
 
 
 

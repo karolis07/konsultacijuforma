@@ -12,7 +12,7 @@
 <!-- HTML Form (wrapped in a .bootstrap-iso div) -->
 <div class="bootstrap-iso">
     <div class="container-fluid">
-        <div class="row">
+        <div class="row" ng-controller="registrationControll">
             <div class="col-md-6 col-sm-6 col-xs-12">
                 <form role="form">
                     <div class="form-group ">
@@ -22,7 +22,7 @@
         *
        </span>
                         </label>
-                        <input class="form-control" id="name" name="name" type="text"/>
+                        <input class="form-control" id="name" ng-model="name" type="text"/>
                     </div>
                     <div class="form-group ">
                         <label class="control-label requiredField" for="surname">
@@ -31,7 +31,7 @@
         *
        </span>
                         </label>
-                        <input class="form-control" id="surname" name="surname" type="text"/>
+                        <input class="form-control" id="surname" ng-model="surname" type="text"/>
                     </div>
                     <div class="form-group ">
                         <label class="control-label requiredField" for="tel">
@@ -40,7 +40,7 @@
         *
        </span>
                         </label>
-                        <input class="form-control" id="tel" name="tel" type="text"/>
+                        <input class="form-control" id="tel" ng-model="tel" type="text"/>
                     </div>
                     <div class="form-group ">
                         <label class="control-label " for="email">
@@ -55,7 +55,7 @@
         *
        </span>
                         </label>
-                        <select class="select form-control" id="bank" name="bank">
+                        <select class="select form-control" id="bank" ng-model="bank">
                             <option value="Pasirinkite" disabled selected hidden>
                                 Pasirinkite
                             </option>
@@ -83,7 +83,7 @@
         *
        </span>
                         </label>
-                        <input class="form-control" id="date" name="date" placeholder="DD/MM/YYYY" type="text"/>
+                        <input class="form-control" id="date" ng-model="date" placeholder="DD/MM/YYYY" type="text"/>
                     </div>
                     <div class="form-group ">
                         <label class="control-label requiredField" for="subject">
@@ -92,7 +92,7 @@
         *
        </span>
                         </label>
-                        <select class="select form-control" id="subject" name="subject">
+                        <select class="select form-control" id="subject" ng-model="subject">
                             <option value="Pasirinkite" disabled selected hidden>
                                 Pasirinkite
                             </option>
@@ -120,14 +120,14 @@
                         <label class="control-label " for="message">
                             Pastabos, komentarai
                         </label>
-                        <textarea class="form-control" cols="40" id="message" name="message" rows="10"></textarea>
+                        <textarea class="form-control" cols="40" id="message" ng-model="message" rows="10"></textarea>
                     </div>
                     <div>
                         <!--<button class="btn btn-primary " name="submit" type="submit">-->
                         <!--Siųsti-->
                         <!--</button>-->
                         <hr class="colorgraph">
-                        <input type="submit" value="Register" class="btn btn-primary btn-block btn-lg">
+                        <button type="button" ng-click="submit()" class="btn btn-primary btn-block btn-lg">Registruoti</button>
                     </div>
 
                 </form>
