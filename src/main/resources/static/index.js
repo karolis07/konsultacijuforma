@@ -60,7 +60,7 @@ var demoApp = angular.module('demoApp',['ngRoute']);
                 };
             }]);
 
-        demoApp.controller('registerController', [function($scope) {
+        demoApp.controller('registerController', [function($scope, $location) {
 
                     $scope.submit = function(){
                         $location.url('/blabla');
