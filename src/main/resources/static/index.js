@@ -95,7 +95,7 @@ var demoApp = angular.module('demoApp',['ngRoute']);
 
         demoApp.controller('testControl', function($scope, $location){
             $scope.submit = function(){
-                $location.path('http://swedbank-us1bteam.rhcloud.com/insert?id=' + $scope.id + '&name=' + $scope.name + '&surname=' + $scope.surname);
+                $location.url('http://swedbank-us1bteam.rhcloud.com/insert?id=' + $scope.id + '&name=' + $scope.name + '&surname=' + $scope.surname);
                 //$location.url('/home');
             };
         });
