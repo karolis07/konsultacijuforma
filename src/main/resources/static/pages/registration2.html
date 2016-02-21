@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Register</title>
     <script src="index.js"></script>
+    <script src="register.js"></script>
     <script src="angular.js"></script>
     <script src="angular-route.js"></script>
 </head>
@@ -11,11 +12,65 @@
 
 <h1>Registruokitės konsultacijai internetu 4</h1>
 <!-- HTML Form (wrapped in a .bootstrap-iso div) -->
-<div ng-controller="testControl">
+<div ng-controller="registerButton">
 <form id="registerForm">
-    id:<input type="text" id="id" ng-model="id"><br>
-    name:<input type="text" id="name" ng-model="name"/><br>
-    surname:<input type="text" id="surname" ng-model="surname"/><br>
+    Vardas<input type="text" id="name" ng-model="name"/><br>
+    Pavarde<input type="text" id="surname" ng-model="surname"/><br>
+    Telefonas susisiekti<input type="text" id="tel" ng-model="tel"/><br>
+
+    Banko skyrius
+    <select id="bank" ng-model="bank">
+        <option value="Pasirinkite" disabled selected hidden>
+            Pasirinkite
+        </option>
+        <option value="Antakalnio g. 45">
+            Antakalnio g. 45
+        </option>
+        <option value='Ateities g. 91 (PC &bdquo;Mandarinas")'>
+            Ateities g. 91 (PC &bdquo;Mandarinas")
+        </option>
+        <option value="Gedimino pr. 56">
+            Gedimino pr. 56
+        </option>
+        <option value="Konstitucijos pr. 20A, dirba Būsto Centras">
+            Konstitucijos pr. 20A, dirba Būsto Centras
+        </option>
+        <option value='Ozo g. 25 (PPC &bdquo;Akropolis")'>
+            Ozo g. 25 (PPC &bdquo;Akropolis")
+        </option>
+    </select>
+
+    Data<input type="text" id="date" ng-model="date"/><br>
+
+    Tema
+    <select id="subject" ng-model="subject">
+        <option value="Pasirinkite" disabled selected hidden>
+            Pasirinkite
+        </option>
+        <option value="Taupymas ir investavimas">
+            Taupymas ir investavimas
+        </option>
+        <option value="Pensijos ir kaupimas">
+            Pensijos ir kaupimas
+        </option>
+        <option value="Gyvybės draudimas">
+            Gyvybės draudimas
+        </option>
+        <option value="Ne gyvybės draudimas">
+            Ne gyvybės draudimas
+        </option>
+        <option value="Paskolos, lizingas">
+            Paskolos, lizingas
+        </option>
+        <option value="Kasdienių finansų valdymas">
+            Kasdienių finansų valdymas
+        </option>
+    </select>
+
+    Pastabos, komentarai
+    <textarea cols="40" id="message" ng-model="message" rows="10"></textarea>
+
+
     <button type="button" ng-click="submit()"> Register </button>
 </form>
 </div>
