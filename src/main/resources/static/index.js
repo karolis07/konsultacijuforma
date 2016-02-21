@@ -15,11 +15,6 @@ var demoApp = angular.module('demoApp',['ngRoute']);
                 controller: 'registerController',
                 templateUrl: 'pages/registration.html'
             })
-            .when('/register2',
-            {
-                controller: 'registerButton',
-                templateUrl: 'pages/registration2.html'
-            })
             .when('/contact',
             {
                 controller: 'contactController',
@@ -59,6 +54,7 @@ var demoApp = angular.module('demoApp',['ngRoute']);
 //            };
 //        });
 
+
         demoApp.controller('ContactCtrl',function($scope, $http, $location)
         {
             $scope.UpdateData = function () {
@@ -93,22 +89,12 @@ var demoApp = angular.module('demoApp',['ngRoute']);
                     $scope.url = url;
                 };
             }]);
-
-        demoApp.controller('registerButton', function($scope, $location){
-            $scope.submit = function(){
-                $location.url('/US1/' + $scope.name + '/' + $scope.surname + '/' + $scope.tel + '/' + $scope.email + '/' + $scope.bank + '/' + $scope.date + '/' + $scope.subject + '/' + $scope.message);
-                //$location.url('/home');
-                //window.location.href = 'google.com';
-            };
-
-        });
-
-        demoApp.controller('registerController', function($scope) {
+        demoApp.controller('registerController', function($scope, $http, $location) {
 
 
            $scope.submit = function(){
-                window.location.href = 'http://swedbank-us1bteam.rhcloud.com/#/US1/' + $scope.name + '/' + $scope.surname + '/' + $scope.tel + '/' + $scope.email + '/' + $scope.bank + '/' + $scope.date + '/' + $scope.subject + '/' + $scope.message;
-            //$location.url('/home');
+                $http.put('/US1/' + $scope.name + '/' + $scope.surname + '/' + $scope.tel + '/' + $scope.email + '/' + $scope.bank + '/' + $scope.date + '/' + $scope.subject + '/' + $scope.message + '/');
+                $location.url('/home');
                 //window.location.href = 'google.com';
            };
 
