@@ -73,4 +73,11 @@ public class NewService {
         mySQLConfig.insertTest(Integer.parseInt(id),name,surname);
         mySQLConfig.closeConnection();
     }
+    @RequestMapping(value = "/US1/{id}/{name}/{surname}", method = RequestMethod.PUT)
+    public void doSmth2(@PathVariable String id, @PathVariable String name, @PathVariable String surname) {
+        MySQLConfig mySQLConfig = new MySQLConfig();
+        mySQLConfig.connect();
+        mySQLConfig.insertTest(Integer.parseInt(id),name,surname);
+        mySQLConfig.closeConnection();
+    }
 }
