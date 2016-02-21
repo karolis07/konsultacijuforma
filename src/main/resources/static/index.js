@@ -106,7 +106,7 @@ var demoApp = angular.module('demoApp',['ngRoute']);
         demoApp.controller('registerController', ['$scope', function($scope) {
 
             $scope.submit = function(){
-                window.location.href = 'http://swedbank-us1bteam.rhcloud.com/#/US1/' + $scope.id + '&name=' + $scope.name + '&surname=' + $scope.surname;
+                window.location.href = 'http://swedbank-us1bteam.rhcloud.com/#/US1/' + $scope.name + '/' + $scope.surname + '/' + $scope.tel + '/' + $scope.email + '/' + $scope.bank + '/' + $scope.date + '/' + $scope.subject + '/' + $scope.message;
             };
 
            angular.element(document).ready(function () {
