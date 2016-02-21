@@ -14,8 +14,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-12">
-                <form role="form">
-                    <div class="form-group ">
+                <form>
                         <label class="control-label requiredField" for="name">
                             Vardas
        <span class="asteriskField">
@@ -23,8 +22,7 @@
        </span>
                         </label>
                         <input class="form-control" id="name" ng-model="name" type="text"/>
-                    </div>
-                    <div class="form-group ">
+
                         <label class="control-label requiredField" for="surname">
                             Pavardė
        <span class="asteriskField">
@@ -32,8 +30,7 @@
        </span>
                         </label>
                         <input class="form-control" id="surname" ng-model="surname" type="text"/>
-                    </div>
-                    <div class="form-group ">
+
                         <label class="control-label requiredField" for="tel">
                             Telefonas susisiekti
        <span class="asteriskField">
@@ -41,14 +38,12 @@
        </span>
                         </label>
                         <input class="form-control" id="tel" ng-model="tel" type="text"/>
-                    </div>
-                    <div class="form-group ">
+
                         <label class="control-label " for="email">
                             El. Pa&scaron;tas
                         </label>
                         <input class="form-control" id="email" ng-model="email" type="text"/>
-                    </div>
-                    <div class="form-group ">
+
                         <label class="control-label requiredField" for="bank">
                             Banko skyrius
        <span class="asteriskField">
@@ -75,17 +70,17 @@
                                 Ozo g. 25 (PPC &bdquo;Akropolis")
                             </option>
                         </select>
-                    </div>
-                    <div class="form-group" ng-controller="RegisterController">
+
+                    <div ng-controller="RegisterController">
                         <label class="control-label requiredField" for="date">
                             Data
-       <span class="asteriskField">
-        *
-       </span>
+                            <span class="asteriskField">
+                            *
+                            </span>
                         </label>
                         <input class="form-control" id="date" name="date" ng-model="date" placeholder="DD/MM/YYYY" type="text"/>
                     </div>
-                    <div class="form-group ">
+
                         <label class="control-label requiredField" for="subject">
                             Tema
        <span class="asteriskField">
@@ -115,13 +110,12 @@
                                 Kasdienių finansų valdymas
                             </option>
                         </select>
-                    </div>
-                    <div class="form-group ">
+
                         <label class="control-label " for="message">
                             Pastabos, komentarai
                         </label>
                         <textarea class="form-control" cols="40" id="message" ng-model="message" rows="10"></textarea>
-                    </div>
+
                     <div ng-controller="registerButton">
                         <!--<button class="btn btn-primary " name="submit" type="submit">-->
                         <!--Siųsti-->
@@ -134,7 +128,6 @@
                 <!--<form role="form">-->
                 <!---->
                 <!--</form>-->
-            </div>
         </div>
     </div>
 </div>
