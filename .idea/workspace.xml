@@ -45,8 +45,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="18.670807">
-              <caret line="334" column="70" selection-start-line="334" selection-start-column="70" selection-end-line="334" selection-end-column="70" />
+            <state vertical-scroll-proportion="11.856089">
+              <caret line="357" column="9" selection-start-line="357" selection-start-column="9" selection-end-line="357" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -1351,12 +1351,6 @@
       <updated>1455466756306</updated>
       <workItem from="1455812046845" duration="2187000" />
     </task>
-    <task id="LOCAL-00052" summary="try register">
-      <created>1456052785729</created>
-      <option name="number" value="00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1456052785729</updated>
-    </task>
     <task id="LOCAL-00053" summary="try register">
       <created>1456053182366</created>
       <option name="number" value="00053" />
@@ -1645,7 +1639,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456137737034</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="Added login controller.  Might not work. Fixed controller syntax">
+      <created>1456138051876</created>
+      <option name="number" value="00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1456138051876</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1663,7 +1663,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289597" sideWeight="0.50208336" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4283582" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32283464" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1712,7 +1712,8 @@
     <MESSAGE value="try register" />
     <MESSAGE value="Added choose time option to registration" />
     <MESSAGE value="Added login controller.  Might not work." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added login controller.  Might not work." />
+    <MESSAGE value="Added login controller.  Might not work. Fixed controller syntax" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added login controller.  Might not work. Fixed controller syntax" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2065,8 +2066,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="18.670807">
-          <caret line="334" column="70" selection-start-line="334" selection-start-column="70" selection-end-line="334" selection-end-column="70" />
+        <state vertical-scroll-proportion="11.856089">
+          <caret line="357" column="9" selection-start-line="357" selection-start-column="9" selection-end-line="357" selection-end-column="14" />
           <folding />
         </state>
       </provider>

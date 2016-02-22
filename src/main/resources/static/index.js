@@ -72,8 +72,8 @@ var demoApp = angular.module('demoApp',['ngRoute', 'ngCookies']);
 
 
 // LOGIN STUFF STARTS HERE
-       (function () {
-           'use strict';
+//       (function () {
+//           'use strict';
 
            demoApp
                .factory('AuthenticationService', AuthenticationService)
@@ -355,7 +355,7 @@ var demoApp = angular.module('demoApp',['ngRoute', 'ngCookies']);
                        });
                    }
 
-       })();
+//       })();
 // LOGIN STUFF ENDS HERE
 
 
