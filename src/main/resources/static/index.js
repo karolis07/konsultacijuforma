@@ -302,37 +302,37 @@ var demoApp = angular.module('demoApp',['ngRoute', 'ngCookies']);
                         .when('/',
                                    {
                                        controller: 'loginController',
-                                       templateUrl: 'pages/login.html'
+                                       templateUrl: 'pages/login.html',
                                        controllerAs: 'vm'
                                    })
                                    .when('/register',
                                    {
                                        controller: 'registerController',
-                                       templateUrl: 'pages/registration.html'
+                                       templateUrl: 'pages/registration.html',
                                        controllerAs: 'vm'
                                    })
                                    .when('/contact',
                                    {
                                        controller: 'contactController',
-                                       templateUrl: 'pages/contact.html'
+                                       templateUrl: 'pages/contact.html',
                                        controllerAs: 'vm'
                                    })
                                    .when('/history',
                                    {
                                         controller: 'historyController',
-                                        templateUrl: 'pages/history.html'
+                                        templateUrl: 'pages/history.html',
                                         controllerAs: 'vm'
                                    })
                                    .when('/home',
                                    {
                                        controller: 'homeController',
-                                       templateUrl: 'pages/home.html'
+                                       templateUrl: 'pages/home.html',
                                        controllerAs: 'vm'
                                    })
                                    .when('/test',
                                    {
                                        controller: 'ContactCtrl',
-                                       templateUrl: 'pages/test.html'
+                                       templateUrl: 'pages/test.html',
                                        controllerAs: 'vm'
                                    })
                                    .otherwise({ redirectTo: '/'});
