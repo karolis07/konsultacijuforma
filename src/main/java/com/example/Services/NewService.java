@@ -66,6 +66,11 @@ public class NewService {
         mySQLConfig.closeConnection();
     }
 
+    //                $http.put('/US2/' + $scope.name + '/' + $scope.surname + '/' + $scope.tel + '/' +
+    // $scope.email + '/' + $scope.bank + '/' + $scope.datepicker.date + '/' + $scope.time + '/' +
+    // $scope.subject + '/' + $scope.message);
+
+
     @RequestMapping(value = "/US2/{name}/{surname}/{tel}/{email}/{bank}/{date}/{time}/{subject}/{message}", method = RequestMethod.PUT)
     public void putInRegistrations(
             @PathVariable String name, @PathVariable String surname, @PathVariable String tel,
@@ -75,7 +80,7 @@ public class NewService {
         MySQLConfig mySQLConfig = new MySQLConfig();
         mySQLConfig.connect();
 
-        date += time;
+        date += " " + time;
 
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 
