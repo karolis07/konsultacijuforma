@@ -65,10 +65,11 @@
       <file leaf-file-name="Language.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Config/Language.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5903614">
-              <caret line="76" column="45" selection-start-line="76" selection-start-column="45" selection-end-line="76" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.18906395">
+              <caret line="103" column="4" selection-start-line="103" selection-start-column="4" selection-end-line="103" selection-end-column="4" />
               <folding>
-                <element signature="e#195#211#0" expanded="true" />
+                <element signature="method#getLT#0;class#Language#0" expanded="false" />
+                <element signature="method#getEN#0;class#Language#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1384,12 +1385,6 @@
       <updated>1455466756306</updated>
       <workItem from="1455812046845" duration="2187000" />
     </task>
-    <task id="LOCAL-00053" summary="try register">
-      <created>1456053182366</created>
-      <option name="number" value="00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1456053182366</updated>
-    </task>
     <task id="LOCAL-00054" summary="try register">
       <created>1456053352585</created>
       <option name="number" value="00054" />
@@ -1678,7 +1673,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456134848576</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="Languages LT list">
+      <created>1456137908791</created>
+      <option name="number" value="00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1456137908792</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1744,7 +1745,8 @@
     <MESSAGE value="try sql" />
     <MESSAGE value="try register" />
     <MESSAGE value="updated registration to DB" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated registration to DB" />
+    <MESSAGE value="Languages LT list" />
+    <option name="LAST_COMMIT_MESSAGE" value="Languages LT list" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2093,10 +2095,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Config/Language.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5903614">
-          <caret line="76" column="45" selection-start-line="76" selection-start-column="45" selection-end-line="76" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.18906395">
+          <caret line="103" column="4" selection-start-line="103" selection-start-column="4" selection-end-line="103" selection-end-column="4" />
           <folding>
-            <element signature="e#195#211#0" expanded="true" />
+            <element signature="method#getLT#0;class#Language#0" expanded="false" />
+            <element signature="method#getEN#0;class#Language#0" expanded="false" />
           </folding>
         </state>
       </provider>
