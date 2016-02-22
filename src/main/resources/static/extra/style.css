@@ -5,6 +5,25 @@
     width: 100%;
     float: left;
 }
+.footer {
+    background-image: url("footer.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 113px;
+    float: left;
+}
+.footerText {
+    margin-left: 50%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    width: 20%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    text-wrap: normal;
+    align-items: center;
+}
 .login {
     background-color: limegreen;
     margin-left: 36%;
@@ -17,7 +36,7 @@
     overflow: hidden;
     align-items: center;
 }
-.column1 {
+.columnWriteUs {
     margin-left: 15.5%;
     margin-top: 3%;
     margin-bottom: 3%;
@@ -27,7 +46,7 @@
     overflow: hidden;
     align-items: center;
 }
-.column2 {
+.columnRegister {
     margin-left: 2%;
     margin-top: 3%;
     margin-bottom: 3%;
@@ -37,7 +56,7 @@
     overflow: hidden;
     align-items: center;
 }
-.column3 {
+.columnMyReg {
     margin-left: 3%;
     margin-top: 3%;
     margin-bottom: 3%;
