@@ -306,8 +306,8 @@ DEL USER ID SAUGOJIMO IR PERDAVIMO NAUDOTI $ROOTSCOPE.USERID
                    }
                }
 
-           LoginController.$inject = ['$location', 'AuthenticationService', 'FlashService'];
-               function LoginController($location, AuthenticationService, FlashService) {
+           LoginController.$inject = ['$location', 'AuthenticationService'];
+               function LoginController($location, AuthenticationService) {
                    var vm = this;
 
                    vm.login = login;
@@ -324,7 +324,7 @@ DEL USER ID SAUGOJIMO IR PERDAVIMO NAUDOTI $ROOTSCOPE.USERID
                                AuthenticationService.SetCredentials(vm.username, vm.password);
                                $location.path('/home');
                            } else {
-                               FlashService.Error(response.message);
+//                               FlashService.Error(response.message);
                                vm.dataLoading = false;
                            }
                        });
