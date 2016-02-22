@@ -93,7 +93,6 @@ public class NewService {
         mySQLConfig.closeConnection();
     }
 
-
     @RequestMapping(value = "/US3/{theme}/{InputMessage}/{first_name}/{last_name}/{phone_number}/{email}/{answer}", method = RequestMethod.PUT)
     public void putInContacts(
             @PathVariable String theme, @PathVariable String InputMessage, @PathVariable String first_name,
