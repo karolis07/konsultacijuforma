@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Language {
    //private List<String> fieldsNames = new ArrayList<String>();
-    public Map<String,String> fieldsNames;
+    public Map<String,String> fieldsNames = new HashMap<String, String>();
 
     public Map<String,String> getLT()
     {
