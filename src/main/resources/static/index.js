@@ -57,18 +57,18 @@ DEL USER ID SAUGOJIMO IR PERDAVIMO NAUDOTI $ROOTSCOPE.USERID
 //            };
 //        });
 
-        demoApp.controller('ContactCtrl',function($scope, $http, $location)
-        {
-            $scope.UpdateData = function () {
-                    $http.put('/US1/'+$('#inputid').val()+'/'+$('#inputFirstname').val()+'/'+$('#inputLastname').val()+'/')
-                    $location.url('/home');
-                };
-        });
+//        demoApp.controller('ContactCtrl',function($scope, $http, $location)
+//        {
+//            $scope.UpdateData = function () {
+//                    $http.put('/US1/'+$('#inputid').val()+'/'+$('#inputFirstname').val()+'/'+$('#inputLastname').val()+'/')
+//                    $location.url('/home');
+//                };
+//        });
 
-        demoApp.controller('cookieController', ['$scope', function($scope) {
-            document.cookie = "someCookieName=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
-            $scope.cookies = document.cookie;
-        }]);
+//        demoApp.controller('cookieController', ['$scope', function($scope) {
+//            document.cookie = "someCookieName=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+//            $scope.cookies = document.cookie;
+//        }]);
 
 
 // LOGIN STUFF STARTS HERE
@@ -79,8 +79,43 @@ DEL USER ID SAUGOJIMO IR PERDAVIMO NAUDOTI $ROOTSCOPE.USERID
                .factory('AuthenticationService', AuthenticationService)
                .factory('UserService', UserService)
                .controller('LoginController', LoginController)
+               .controller('contactController', contactController)
+               .controller('registerController', registerController)
                .config(config)
+               .directive('datepicker', function() {
+                                   return {
+                                       restrict: 'A',
+                                       require : 'ngModel',
+                                       link : function (scope, element, attrs, ngModelCtrl) {
+                                           $(function(){
+                                               element.datepicker({
+                                                   dateFormat:"yy-mm-dd",
+                                                   onSelect:function (date) {
+                                                       ngModelCtrl.$setViewValue(date);
+                                                       scope.$apply();
+                                                   }
+                                               });
+                                           });
+                                       }
+                                   }
+                               })
                .run(run);
+
+           contactController.$inject = ['$scope, $http, $location'];
+           function contactController($scope, $http, $location)
+                                              {
+                                                  $scope.submit = function () {
+                                                          $http.put('/US3/'+$scope.theme+'/'+$scope.InputMessage+'/'+$scope.first_name+'/'+$scope.last_name+'/'+$scope.phone_number+'/'+$scope.email+'/'+$scope.answer+'/');
+                                                          $location.url('/home');
+                                                  };
+                                              }
+           registerController.$inject = ['$scope, $location, $http'];
+           function registerController($scope, $location, $http) {
+            $scope.submit = function(){
+                            $http.put('/US2/' + $scope.name + '/' + $scope.surname + '/' + $scope.tel + '/' + $scope.email + '/' + $scope.bank + '/' + $scope.datepicker.date + '/' + $scope.time + '/' + $scope.subject + '/' + $scope.message);
+                            $location.url('/home');
+                       };
+           }
 
            AuthenticationService.$inject = ['$http', '$cookieStore', '$rootScope', '$timeout', 'UserService'];
            function AuthenticationService($http, $cookieStore, $rootScope, $timeout, UserService) {
@@ -384,39 +419,39 @@ DEL USER ID SAUGOJIMO IR PERDAVIMO NAUDOTI $ROOTSCOPE.USERID
 
 
 
-        demoApp.directive('datepicker', function() {
-                    return {
-                        restrict: 'A',
-                        require : 'ngModel',
-                        link : function (scope, element, attrs, ngModelCtrl) {
-                            $(function(){
-                                element.datepicker({
-                                    dateFormat:"yy-mm-dd",
-                                    onSelect:function (date) {
-                                        ngModelCtrl.$setViewValue(date);
-                                        scope.$apply();
-                                    }
-                                });
-                            });
-                        }
-                    }
-                });
+//        demoApp.directive('datepicker', function() {
+//                    return {
+//                        restrict: 'A',
+//                        require : 'ngModel',
+//                        link : function (scope, element, attrs, ngModelCtrl) {
+//                            $(function(){
+//                                element.datepicker({
+//                                    dateFormat:"yy-mm-dd",
+//                                    onSelect:function (date) {
+//                                        ngModelCtrl.$setViewValue(date);
+//                                        scope.$apply();
+//                                    }
+//                                });
+//                            });
+//                        }
+//                    }
+//                });
 
-        demoApp.controller('contactController',function($scope, $http, $location)
-        {
-            $scope.submit = function () {
-                    $http.put('/US3/'+$scope.theme+'/'+$scope.InputMessage+'/'+$scope.first_name+'/'+$scope.last_name+'/'+$scope.phone_number+'/'+$scope.email+'/'+$scope.answer+'/');
-                    $location.url('/home');
-            };
-        });
-
-        demoApp.controller('registerController', function($scope, $location, $http) {
-
-
-           $scope.submit = function(){
-                $http.put('/US2/' + $scope.name + '/' + $scope.surname + '/' + $scope.tel + '/' + $scope.email + '/' + $scope.bank + '/' + $scope.datepicker.date + '/' + $scope.time + '/' + $scope.subject + '/' + $scope.message);
-                $location.url('/home');
-           };
+//        demoApp.controller('contactController',function($scope, $http, $location)
+//        {
+//            $scope.submit = function () {
+//                    $http.put('/US3/'+$scope.theme+'/'+$scope.InputMessage+'/'+$scope.first_name+'/'+$scope.last_name+'/'+$scope.phone_number+'/'+$scope.email+'/'+$scope.answer+'/');
+//                    $location.url('/home');
+//            };
+//        });
+//
+//        demoApp.controller('registerController', function($scope, $location, $http) {
+//
+//
+//           $scope.submit = function(){
+//                $http.put('/US2/' + $scope.name + '/' + $scope.surname + '/' + $scope.tel + '/' + $scope.email + '/' + $scope.bank + '/' + $scope.datepicker.date + '/' + $scope.time + '/' + $scope.subject + '/' + $scope.message);
+//                $location.url('/home');
+//           };
 
 
 
@@ -430,7 +465,7 @@ DEL USER ID SAUGOJIMO IR PERDAVIMO NAUDOTI $ROOTSCOPE.USERID
 //                    autoclose: true,
 //                })
 //           });
-        });
+//        });
 
 
 
