@@ -70,27 +70,29 @@ var demoApp = angular.module('demoApp',['ngRoute']);
             $scope.cookies = document.cookie;
         }]);
 
-        demoApp.controller('loginController', ['$scope', '$http', '$templateCache',
-            function($scope, $http, $templateCache){
-                $scope.method = 'GET';
-                $scope.url = '/peanuts';
-                $scope.code = null;
-                $scope.response = null;
+//        demoApp.controller('loginController', ['$scope', '$http', '$templateCache',
+//            function($scope, $http, $templateCache){
+//                $scope.method = 'GET';
+//                $scope.url = '/peanuts';
+//                $scope.code = null;
+//                $scope.response = null;
+//
+//                $http({method: $scope.method, url: $scope.url, cache: $templateCache}).
+//                then(function(response){
+//                    $scope.status = response.status;
+//                    $scope.data = response.data;
+//                }, function(response){
+//                    $scope.data = response.data || "Request failed";
+//                    $scope.status = response.status;
+//                });
+//
+//                $scope.updateModel = function(method, url) {
+//                    $scope.method = method;
+//                    $scope.url = url;
+//                };
+//            }]);
 
-                $http({method: $scope.method, url: $scope.url, cache: $templateCache}).
-                then(function(response){
-                    $scope.status = response.status;
-                    $scope.data = response.data;
-                }, function(response){
-                    $scope.data = response.data || "Request failed";
-                    $scope.status = response.status;
-                });
 
-                $scope.updateModel = function(method, url) {
-                    $scope.method = method;
-                    $scope.url = url;
-                };
-            }]);
 
         demoApp.directive('datepicker', function() {
                     return {
@@ -122,7 +124,7 @@ var demoApp = angular.module('demoApp',['ngRoute']);
 
 
            $scope.submit = function(){
-                $http.put('/US2/' + $scope.name + '/' + $scope.surname + '/' + $scope.tel + '/' + $scope.email + '/' + $scope.bank + '/' + $scope.datepicker.date + '/' + $scope.subject + '/' + $scope.message);
+                $http.put('/US2/' + $scope.name + '/' + $scope.surname + '/' + $scope.tel + '/' + $scope.email + '/' + $scope.bank + '/' + $scope.datepicker.date + '/' + $scope.time + '/' + $scope.subject + '/' + $scope.message);
                 $location.url('/home');
            };
 
