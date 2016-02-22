@@ -66,16 +66,16 @@ public class NewService {
         mySQLConfig.closeConnection();
     }
 
-    @RequestMapping(value = "/US2/{name}/{surname}/{tel}/{email}/{bank}/{date}/{subject}/{message}", method = RequestMethod.PUT)
+    @RequestMapping(value = "/US2/{name}/{surname}/{tel}/{email}/{bank}/{date}/{time}/{subject}/{message}", method = RequestMethod.PUT)
     public void putInRegistrations(
             @PathVariable String name, @PathVariable String surname, @PathVariable String tel,
             @PathVariable String email, @PathVariable String bank, @PathVariable String date,
-            @PathVariable String subject, @PathVariable String message)
+            @PathVariable String time, @PathVariable String subject, @PathVariable String message)
     {
         MySQLConfig mySQLConfig = new MySQLConfig();
         mySQLConfig.connect();
 
-        date += " 12:00";
+        date += time;
 
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 
