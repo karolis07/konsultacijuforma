@@ -336,7 +336,7 @@ DEL USER ID SAUGOJIMO IR PERDAVIMO NAUDOTI $ROOTSCOPE.USERID
                        $routeProvider
                         .when('/',
                                    {
-                                       controller: 'loginController',
+                                       controller: 'LoginController',
                                        templateUrl: 'pages/login.html',
                                        controllerAs: 'vm'
                                    })
