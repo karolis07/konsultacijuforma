@@ -72,8 +72,8 @@ DEL USER ID SAUGOJIMO IR PERDAVIMO NAUDOTI $ROOTSCOPE.USERID
 
 
 // LOGIN STUFF STARTS HERE
-       (function () {
-           'use strict';
+//       (function () {
+//           'use strict';
 
            angular.module('demoApp',['ngRoute', 'ngCookies'])
                .factory('AuthenticationService', AuthenticationService)
@@ -390,7 +390,7 @@ DEL USER ID SAUGOJIMO IR PERDAVIMO NAUDOTI $ROOTSCOPE.USERID
                        });
                    }
 
-       })();
+//       })();
 // LOGIN STUFF ENDS HERE
 
 
