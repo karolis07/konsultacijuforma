@@ -91,7 +91,7 @@ public class MySQLConfig {
             int userID, String theme, String InputMessage,
             String first_name, String last_name, String phone_number,
             String email, String answer) {
-        String query = String.format("INSERT INTO REGISTRATIONS (UserID,Name,Surname,PhoneNo,EMail,BankDepartment,RegistrationDate,RegistrationTime,DropDownList,Message)" +
+        String query = String.format("INSERT INTO CONTACTS (UserID,Name,Surname,PhoneNo,EMail,BankDepartment,RegistrationDate,RegistrationTime,DropDownList,Message)" +
                         "values(\"%d\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\");",
                 userID, theme, InputMessage, first_name, last_name, phone_number, email, answer);
         try {
