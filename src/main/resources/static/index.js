@@ -1,6 +1,9 @@
-/**
- * Created by p998snc on 2016.02.10.
- */
+/*
+
+DEL USER ID SAUGOJIMO IR PERDAVIMO NAUDOTI $ROOTSCOPE.USERID
+
+*/
+
 var demoApp = angular.module('demoApp',['ngRoute']);
 
     demoApp.config(function($routeProvider){
@@ -121,8 +124,6 @@ var demoApp = angular.module('demoApp',['ngRoute']);
            $scope.submit = function(){
                 $http.put('/US2/' + $scope.name + '/' + $scope.surname + '/' + $scope.tel + '/' + $scope.email + '/' + $scope.bank + '/' + $scope.date + '/' + $scope.subject + '/' + $scope.message);
                 $location.url('/home');
-            //$location.url('/home');
-                //window.location.href = 'google.com';
            };
 
 

@@ -85,6 +85,26 @@ public class MySQLConfig {
             System.out.println(e.getMessage());
         }
     }
+
+
+    public void insertContacts(
+            int userID, String theme, String InputMessage,
+            String first_name, String last_name, String phone_number,
+            String email, String answer) {
+        String query = String.format("INSERT INTO REGISTRATIONS (UserID,Name,Surname,PhoneNo,EMail,BankDepartment,RegistrationDate,RegistrationTime,DropDownList,Message)" +
+                        "values(\"%d\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\");",
+                userID, theme, InputMessage, first_name, last_name, phone_number, email, answer);
+        try {
+            int value = st.executeUpdate(query);
+            if (value == 1)
+                System.out.println("Successfully inserted value");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+
+
 }
 
 

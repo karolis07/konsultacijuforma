@@ -94,4 +94,17 @@ public class NewService {
     }
 
 
+    @RequestMapping(value = "/US3/{theme}/{InputMessage}/{first_name}/{last_name}/{phone_number}/{email}/{answer}", method = RequestMethod.PUT)
+    public void putInContacts(
+            @PathVariable String theme, @PathVariable String InputMessage, @PathVariable String first_name,
+            @PathVariable String last_name, @PathVariable String phone_number, @PathVariable String email,
+            @PathVariable String answer)
+    {
+        MySQLConfig mySQLConfig = new MySQLConfig();
+        mySQLConfig.connect();
+        mySQLConfig.insertContacts(1,theme,InputMessage,first_name,last_name,phone_number,email,answer);
+        mySQLConfig.closeConnection();
+    }
+
+
 }
