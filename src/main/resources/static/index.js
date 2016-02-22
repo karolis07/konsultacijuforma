@@ -4,7 +4,7 @@ DEL USER ID SAUGOJIMO IR PERDAVIMO NAUDOTI $ROOTSCOPE.USERID
 
 */
 
-var demoApp = angular.module('demoApp',['ngRoute', 'ngCookies']);
+//var demoApp = angular.module('demoApp',['ngRoute', 'ngCookies']);
 
 //    demoApp.config(function($routeProvider){
 //        $routeProvider
@@ -72,10 +72,10 @@ var demoApp = angular.module('demoApp',['ngRoute', 'ngCookies']);
 
 
 // LOGIN STUFF STARTS HERE
-//       (function () {
-//           'use strict';
+       (function () {
+           'use strict';
 
-           demoApp
+           angular.module('demoApp',['ngRoute', 'ngCookies'])
                .factory('AuthenticationService', AuthenticationService)
                .factory('UserService', UserService)
                .controller('LoginController', LoginController)
@@ -355,7 +355,7 @@ var demoApp = angular.module('demoApp',['ngRoute', 'ngCookies']);
                        });
                    }
 
-//       })();
+       })();
 // LOGIN STUFF ENDS HERE
 
 
